@@ -2,26 +2,59 @@
     <head>
         <meta charset="UTF-8">
         <!-- Moet voor elke pagina apart -->
-        <title></title>
+        <title>The Martian</title>
         <meta name="description" content="">
         <!-- ------------------------------>
-
         <meta name="author" content="Mattijs Gietman, Niek Grimbergen and Sileman Patang">
-
-
-
-        <meta   name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="summary.html">Synopsis</a></li>
-                <li><a href="ratings.html">Ratings</a></li>
-                <li><a href="background.html">Background</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <!-- The header for the logo, we could also put the nav inside the header eventually -->
+        <!-- Also, the header is shared among pages -->
+        <header>
+
+            <!-- Logo can come here -->
+            <figure>
+                <img src="" alt=""/>
+            </figure>
+
+            <!-- nav-tag for navigation between our five pages and is shared among pages -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="summary.html">Synopsis</a></li>
+                    <li><a href="ratings.html">Ratings</a></li>
+                    <li><a href="background.html">Background</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <!-- the main-tag is where all the page-specific content will be -->
+        <main>
+
+            <!-- article-tag is to announce that the page-specific part starts -->
+            <article>
+
+                <!-- Maybe add a banner here -->
+                <img src="" alt=""/>
+
+                <h1>The Martian</h1>
+
+                <!-- For instance -->
+                <section>
+                    <h2>Cast</h2>
+                </section>
+
+            </article>
+        </main>
+
+        <!-- footer is for copyright or contact or something like that and is shared among pages -->
+        <footer>
+
+        </footer>
     </body>
 </html>
