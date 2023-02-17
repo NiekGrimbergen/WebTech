@@ -5,3 +5,7 @@
     --secondary-color: #795246;
     --tertiary-color: #ECE0DC;
 }
+
+.logo {
+    max-width: 100%;
+}
