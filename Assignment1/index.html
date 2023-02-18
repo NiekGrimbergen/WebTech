@@ -16,23 +16,29 @@
         <header>
 
             <!-- Logo can come here -->
-<<<<<<< HEAD
+
             <figure class="logo-container">
-                <img class="logo-container__logo" src="logo.jfif" alt="Logo reading &quot;The Martian&quot;"/>
-=======
-            <figure>
-                <img class="logo" src="images/logo.jfif" alt="Logo reading &quot;The Martian&quot;"/>
->>>>>>> 61f9cad9d7d22304b5ec74d9c47c2a95db32cafa
+                <img class="logo-container__logo" src="images/logo.jfif" alt="Logo reading &quot;The Martian&quot;"/>
             </figure>
 
             <!-- nav-tag for navigation between our five pages and is shared among pages -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="summary.html">Synopsis</a></li>
-                    <li><a href="ratings.html">Ratings</a></li>
-                    <li><a href="cast.html">Cast</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="summary.html">Synopsis</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="ratings.html">Ratings</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="cast.html">Cast</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -45,47 +51,84 @@
             <!-- article-tag is to announce that the page-specific part starts -->
             <article id="homepage">
 
-<<<<<<< HEAD
-                <!-- Maybe add a banner here -->
-                <figure class="banner-container">
-                    <img class="banner-container__banner" id="banner-img" src="banner.jpg" alt=""/>
-                </figure>
-=======
-                <img class="banner" id="banner-img" src="images/banner.jpg" alt=""/>
->>>>>>> 61f9cad9d7d22304b5ec74d9c47c2a95db32cafa
 
-                <h1>The Martian</h1>
 
-                <section class="website-opener">
-                    <h2>Bring Him Home!</h2>
-                    <p>
+                <h1 class="title">The Martian</h1>
+
+                <section class="section">
+                    <h2 class="section__title">Bring Him Home!</h2>
+                    <p class="section__paragraph">
                         Get ready for an out-of this world adventure as you embark on a journey to Mars with "The Martian"!
+                    </p>
+                    <p class="section__paragraph">
                         Join astronaut Mark Watney as he fights against all odds to survive on the red planet and make his way back home.
                         With stunning visuals and a gripping storyline, this film will take you on a ride that you'll never forget.
                         So sit back, buckle up, and experience the thrill of "The Martian", the movie that proves that with enough
-                        determination and scientific know how, anything is possible
+                        determination and scientific know how, anything is possible!
                     </p>
-                </section>              
+                </section>
 
 
 
-                <section class="movie-info">
-                    <h2>Movie Info</h2>
-                    <p>
-                        Rating:	PG-13 (Injury Images|Brief Nudity|Some Strong Language) <br>
-                        Genre:	Sci-Fi, Adventure, Drama <br>
-                        Original Language:	English <br>
-                        Director:	Ridley Scott <br>
-                        Producer:	Simon Kinberg, Ridley Scott, Michael Schaefer, Aditya Sood, Mark Huffam <br>
-                        Writer:	Drew Goddard <br>
-                        Release Date (Theaters):	Oct 2, 2015  Wide <br>
-                        Release Date (Streaming):	Jan 12, 2016 <br>
-                        Box Office (Gross USA):	$228.4M <br>
-                        Runtime:	2h 22m <br>
-                        Distributor:	20th Century Fox <br>
-                        Sound Mix:	Dolby Atmos <br>
-                        Aspect Ratio:	Scope (2.35:1) <br>
-                    </p>
+                <section class="section">
+                    <h2 class="section__title">Movie Info</h2>
+                    <table  class="table">
+                        <tbody class="table__body">
+                            <tr class="table__row">
+                                <td class="table__data">Rating</td>
+                                <td class="table__data">PG-13 (Injury Images|Brief Nudity|Some Strong Language)</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Genre</td>
+                                <td class="table__data">Sci-Fi, Adventure, Drama</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Original Language</td>
+                                <td class="table__data">English</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Director</td>
+                                <td class="table__data">Ridley Scott</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Producer</td>
+                                <td class="table__data">Simon Kinberg, Ridley Scott, Michael Schaefer, Aditya Sood, Mark Huffam</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Writer</td>
+                                <td class="table__data">Drew Goddard</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Release Date (Theaters)</td>
+                                <td class="table__data">Oct 2, 2015  Wide</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Release Date (Streaming)</td>
+                                <td class="table__data">Jan 12, 2016</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Box Office (Gross USA)</td>
+                                <td class="table__data">$228.4M</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Runtime</td>
+                                <td class="table__data">2h 22m</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Distributor</td>
+                                <td class="table__data">20th Century Fox</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Sound Mix</td>
+                                <td class="table__data">Dolby Atmos</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Aspect Ratio</td>
+                                <td class="table__data">Scope (2.35:1)</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
                 </section>
 
             </article>
