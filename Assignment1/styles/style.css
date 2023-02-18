@@ -25,6 +25,8 @@ Index
 
 
 /*-------------------- 1.1 Global styles (variables/constants) --------------------*/
+/* import some google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap');
 
 /* Vars */
 
@@ -39,14 +41,16 @@ Index
 body {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .title {
     text-transform: uppercase;
-    letter-spacing: 2;
+    letter-spacing: 1.5;
     font-size: 3rem;
     text-align: center;
+    color:white;
+
 }
 
 .section {
@@ -54,6 +58,7 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 25px 0;
+    background-color: #EDEDED;
 }
 
 .section__title {
@@ -70,16 +75,27 @@ body {
 article {
     padding: 10px;
     overflow: hidden;
+    background-image: url("../images/banner.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .logo-container__logo {
     max-width: 100%;
 }
 
+.table__row:nth-child(even) {
+    background-color: #ddd;
+}
+
 /*-------------------- 1.2 Homepage styles --------------------*/
 
+.banner-container {
+
+}
+
 .banner-container__banner {
-    display: none;
+
 }
 
 
