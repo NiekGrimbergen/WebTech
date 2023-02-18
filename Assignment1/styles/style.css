@@ -29,7 +29,7 @@ Index
 /* Vars */
 
 :root{
-    --primary-color: #C98628;
+    --primary-color: #c97800;
     --secondary-color: #795246;
     --tertiary-color: #ECE0DC;
 }
@@ -42,20 +42,29 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-main {
-    background-color: var(--primary-color);
+.title {
+    text-transform: uppercase;
+    letter-spacing: 2;
+    font-size: 3rem;
+    text-align: center;
 }
 
 .section {
     margin: 30px 5px;
     padding: 10px;
-    background-color: rgba(200, 200, 200, 0.9);
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 25px 0;
+}
+
+.section__title {
+    font-size: 2rem;
+    letter-spacing: 1.6;
+    color: var(--primary-color);
 }
 
 .section__paragraph {
     line-height: 1.5rem;
+    color: #555;
 }
 
 article {
@@ -84,10 +93,6 @@ article {
 .navbar__list {
     list-style-type: none;
     padding: 0;
-}
-
-.navbar__item {
-    border-bottom: 1px solid var(--primary-color);
 }
 
 .navbar__link {

@@ -7,34 +7,46 @@
         <!-- ------------------------------>
 
         <meta name="author" content="Mattijs Gietman, Niek Grimbergen and Sileman Patang">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
+        <!-- The header for the logo, we could also put the nav inside the header eventually -->
         <!-- Also, the header is shared among pages -->
         <header>
 
             <!-- Logo can come here -->
-            <figure>
-                <img src="images/logo.jfif" alt="img"/>
+
+            <figure class="logo-container">
+                <img class="logo-container__logo" src="images/logo.jfif" alt="Logo reading &quot;The Martian&quot;"/>
             </figure>
 
             <!-- nav-tag for navigation between our five pages and is shared among pages -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="summary.html">Synopsis</a></li>
-                    <li><a href="ratings.html">Ratings</a></li>
-                    <li><a href="cast.html">Cast</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="summary.html">Synopsis</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="ratings.html">Ratings</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="cast.html">Cast</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="cast">
-                <h2>Starring</h2>
+            <article>
+                <h1 class="title">Starring</h1>
 
-                <section class="cast-element">
+                <section class="section">
                     <img src="images/matt_damon.jfif" alt="">
                     <h3>Matt Damon</h3>
                     <p class="acting-career">
@@ -52,7 +64,7 @@
                     </p>
                 </section>
 
-                <section class="cast-element">
+                <section class="section">
                     <img src="images/essica_chastain.jfif" alt="">
                     <h3>Jessica Chastain</h3>
                     <p>
@@ -60,7 +72,7 @@
                     </p>
                 </section>
 
-                <section class="cast-element">
+                <section class="section">
                     <img src="images/kristen_wiig.jfif" alt="">
                     <h3>Kristen Wiig</h3>
                     <p>
@@ -71,7 +83,7 @@
                 <section>
                     <img src="" alt="">
                 </section>
-            </section>
+            </article>
         </main>
         <footer>
 

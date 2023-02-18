@@ -7,27 +7,40 @@
         <!-- ------------------------------>
 
         <meta name="author" content="Mattijs Gietman, Niek Grimbergen and Sileman Patang">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
         <!-- Also, the header is shared among pages -->
+        <!-- The header for the logo, we could also put the nav inside the header eventually -->
+        <!-- Also, the header is shared among pages -->
         <header>
 
             <!-- Logo can come here -->
-            <figure>
-                <img src="images/logo.jfif" alt="img"/>
+
+            <figure class="logo-container">
+                <img class="logo-container__logo" src="images/logo.jfif" alt="Logo reading &quot;The Martian&quot;"/>
             </figure>
 
             <!-- nav-tag for navigation between our five pages and is shared among pages -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="summary.html">Synopsis</a></li>
-                    <li><a href="ratings.html">Ratings</a></li>
-                    <li><a href="cast.html">Cast</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="summary.html">Synopsis</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="ratings.html">Ratings</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="cast.html">Cast</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
