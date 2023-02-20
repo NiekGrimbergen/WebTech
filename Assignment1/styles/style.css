@@ -44,6 +44,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.content {
+    margin-top: 15vh;
+}
+
 .title {
     text-transform: uppercase;
     letter-spacing: 1.5;
@@ -73,6 +77,7 @@ body {
 }
 
 article {
+
     padding: 10px;
     overflow: hidden;
     background-image: url("../images/banner.jpg");
@@ -80,9 +85,7 @@ article {
     background-size: cover;
 }
 
-.logo-container__logo {
-    max-width: 100%;
-}
+
 
 .table__row:nth-child(even) {
     background-color: #ddd;
@@ -91,7 +94,7 @@ article {
 /*-------------------- 1.2 Homepage styles --------------------*/
 
 .banner-container {
-
+    display: none;
 }
 
 .banner-container__banner {
@@ -100,22 +103,54 @@ article {
 
 
 
-/* navbar styles */
+/*  header & navbar styles */
+
+
+.page-header, .navbar__list {
+    display: flex;
+}
+
+.page-header {
+    height: 15vh;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.logo-container {
+    height: 7vh;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+.logo-container__logo {
+    margin: 0;
+    height: 100%;
+}
 
 .navbar {
-    width: 100%;
+    width: auto;
+    height: 8vh;
 }
 
 .navbar__list {
     list-style-type: none;
     padding: 0;
+    justify-content: space-evenly;
 }
 
 .navbar__link {
     text-decoration: none;
-    color: black;
-    padding: 10px;
+    color: #EEE;
+    padding: 1px 1px;
     display: block;
+    font-weight: bold;
 }
 
 /*-------------------- 1.3 Homepage styles --------------------*/
