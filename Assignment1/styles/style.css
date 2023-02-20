@@ -1,11 +1,149 @@
-/* Variabelen */
+/*
+
+Index
+-----------------------------------------------------------
+1. Mobile
+    1.1 Global styles (variables/constants)
+    1.2 Homepage styles
+    1.3 Summary styles
+    1.4 Ratings styles
+    1.5 Cast styles
+    1.6 Contact styles
+-----------------------------------------------------------
+2. Desktop
+    2.1 Global styles
+    2.2 Homepage styles
+    2.3 Summary styles
+    2.4 Ratings styles
+    2.5 Cast styles
+    2.6 Contact styles
+
+*/
+
+
+/*-------------------- 1. Mobile --------------------*/
+
+
+/*-------------------- 1.1 Global styles (variables/constants) --------------------*/
+/* import some google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap');
+
+/* Vars */
 
 :root{
-    --primary-color: #C98628;
+    --primary-color: #c97800;
     --secondary-color: #795246;
     --tertiary-color: #ECE0DC;
 }
 
-.logo {
+/* Global styles */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 1.5;
+    font-size: 3rem;
+    text-align: center;
+    color:white;
+
+}
+
+.section {
+    margin: 30px 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0;
+    background-color: #EDEDED;
+}
+
+.section__title {
+    font-size: 2rem;
+    letter-spacing: 1.6;
+    color: var(--primary-color);
+}
+
+.section__paragraph {
+    line-height: 1.5rem;
+    color: #555;
+}
+
+article {
+    padding: 10px;
+    overflow: hidden;
+    background-image: url("../images/banner.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.logo-container__logo {
     max-width: 100%;
+}
+
+.table__row:nth-child(even) {
+    background-color: #ddd;
+}
+
+/*-------------------- 1.2 Homepage styles --------------------*/
+
+.banner-container {
+
+}
+
+.banner-container__banner {
+
+}
+
+
+
+/* navbar styles */
+
+.navbar {
+    width: 100%;
+}
+
+.navbar__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+/*-------------------- 1.3 Homepage styles --------------------*/
+
+/*-------------------- 1.4 Summary styles --------------------*/
+
+/*-------------------- 1.5 Cast styles --------------------*/
+
+/*-------------------- 1.6 Contact styles --------------------*/
+
+/*-------------------- 2. Desktop --------------------*/
+
+@media screen and (min-width: 800px){
+    /*-------------------- 2.1 Global styles --------------------*/
+
+    /*-------------------- 2.2 Homepage styles --------------------*/
+
+    .banner-container__banner {
+        display: block;
+        width: 100%;
+    }
+
+    /*-------------------- 2.3 Homepage styles --------------------*/
+
+    /*-------------------- 2.4 Summary styles --------------------*/
+
+    /*-------------------- 2.5 Cast styles --------------------*/
+
+    /*-------------------- 2.6 Contact styles --------------------*/
+
 }

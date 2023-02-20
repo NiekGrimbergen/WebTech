@@ -16,18 +16,28 @@
         <header>
 
             <!-- Logo can come here -->
-            <figure>
-                <img class="logo" src="logo.jfif" alt="Logo reading &quot;The Martian&quot;"/>
+            <figure class="logo-container">
+                <img class="logo-container__logo" src="images/logo.jfif" alt="Logo reading &quot;The Martian&quot;"/>
             </figure>
 
             <!-- nav-tag for navigation between our five pages and is shared among pages -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="summary.html">Synopsis</a></li>
-                    <li><a href="ratings.html">Ratings</a></li>
-                    <li><a href="background.html">Background</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <nav class="navbar">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="index.html">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="summary.html">Synopsis</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="ratings.html">Ratings</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="cast.html">Cast</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -41,42 +51,142 @@
             <article id="homepage">
 
                 <!-- Maybe add a banner here -->
-                <img class="banner" id="banner-img" src="banner.jpg" alt=""/>
+                <figure class="banner-container">
+                    <img class="banner-container__banner" id="banner-img" src="images/banner.jpg" alt=""/>
+                </figure>
 
-                <h1>The Martian</h1>
 
-                <!-- For instance -->
-                <section class="cast">
-                    <h2>Cast</h2>
+                <h1 class="title">The Martian</h1>
 
-                    <section class="cast-element">
-                        <img src="matt_damon.jfif" alt="">
-                        <h3>Matt Damon</h3>
-                        <p>
-                            Matt Damon plays the role of Mark Watney, an astronaut and botanist who is left stranded on Mars after a fierce dust storm forces his crew to abandon the mission. Watney must use his resourcefulness, courage, and wit to survive in the hostile environment of Mars. He is a brave and determined character who is willing to push the boundaries of human achievement in order to survive. Despite his dire circumstances, Watney remains optimistic and uses his knowledge of science and engineering to find ways to survive and make contact with Earth.
-                        </p>
-                    </section>
-
-                    <section class="cast-element">
-                        <img src="jessica_chastain.jfif" alt="">
-                        <h3>Jessica Chastain</h3>
-                        <p>
-                            Jessica Chastain plays the role of Melissa Lewis in the 2015 science fiction film The Martian. She is the captain of the mission to Mars, tasked with leading her crew of astronauts on a daring rescue mission to save a stranded astronaut. She is portrayed as a competent and capable leader, with a strong sense of duty and responsibility. Chastain brings a great deal of depth to the role, portraying Lewis as a determined and decisive figure who is willing to make tough choices in order to keep her crew safe and accomplish the mission.
-                        </p>
-                    </section>
-
-                    <section class="cast-element">
-                        <img src="kristen_wiig.jfif" alt="">
-                        <h3>Kristen Wiig</h3>
-                        <p>
-                            Kristen Wiig played the role of Annie Montrose in the 2015 film The Martian, directed by Ridley Scott. She played the role of a media representative for NASA and was responsible for handling the press and managing the public's reaction to the news of an astronaut being left behind on Mars. Her character was composed, professional, and had a no-nonsense attitude. Kristen Wiig brought a lightheartedness to the role, creating a memorable character that helped to bring a sense of levity to the film.
-                        </p>
-                    </section>
-
-                    <section>
-                        <img src="" alt="">
-                    </section>
+                <section class="section">
+                    <h2 class="section__title">Bring Him Home!</h2>
+                <section class="website-opener">
+                    <h2>Bring Him Home!</h2>
+                    <p>
+                        The martian is a science fiction movie directed by Ridley Scott and starring Matt Damon as Mark Watney,
+                        an astronaut who is stranded on Mars after his team assumes he is dead and leaves him behind.
+                        With limited supplies and no way to communicate with anyone, Watney must use his scientific expertise and abilities
+                        to survive on the barren planet and find a way to make contact with his home planet. As Watney struggles to stay alive,
+                        a team of scientists and astronauts on Earth work tirelessly to devise a plan to rescue him before his food and resources run out.
+                        Combining stunning visuals, compelling characters, and a gripping plot, the martian is a thrilling exploration of human endurance and the power of science and innovation.
+                    </p>
                 </section>
+
+                <section class="actors">
+                    <h2>Meet the crew!</h2>
+                    <ul>
+                        <li class="actors__single-actor">
+                            Matt Damon as Mark Watney
+                        </li>
+                        <li class="actors__single-actor">
+                            Jessica Chastain as Melissa Lewis
+                        </li>
+                        <li class="actors__single-actor">
+                            Kristen Wiig as Annie Montrose
+                        </li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2>Watch The Martian here!</h2>
+                    <p class="call-to-action">
+                        Experience The Martian today! Watch the movie now, or own it on DVD/Blue-ray. Click below to find out more!
+                    </p>
+                    <button class="call-to-action__button">
+                        Prime Video
+                    </button>
+                    <button class="call-to-action__button">
+                        Youtube
+                    </button>
+                    <button class="call-to-action__button">
+                        Amazon
+                    </button>
+                </section>
+
+
+                <section class="section">
+                    <h2 class="section__title">Movie Info</h2>
+                    <table  class="table">
+                        <tbody class="table__body">
+                                <td class="table__data">Rating</td>
+                                <td class="table__data">PG-13 (Injury Images|Brief Nudity|Some Strong Language)</td>
+                            <tr class="table__row">
+                            </tr>
+                                <td class="table__data">Genre</td>
+                            <tr class="table__row">
+                                <td class="table__data">Sci-Fi, Adventure, Drama</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Original Language</td>
+                                <td class="table__data">English</td>
+                            </tr>
+                                <td class="table__data">Director</td>
+                            <tr class="table__row">
+                                <td class="table__data">Ridley Scott</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Producer</td>
+                            </tr>
+                                <td class="table__data">Simon Kinberg, Ridley Scott, Michael Schaefer, Aditya Sood, Mark Huffam</td>
+                            <tr class="table__row">
+                                <td class="table__data">Writer</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Drew Goddard</td>
+                                <td class="table__data">Release Date (Theaters)</td>
+                            </tr>
+                                <td class="table__data">Oct 2, 2015  Wide</td>
+                            <tr class="table__row">
+                                <td class="table__data">Release Date (Streaming)</td>
+                                <td class="table__data">Jan 12, 2016</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">$228.4M</td>
+                                <td class="table__data">Box Office (Gross USA)</td>
+                            </tr>
+                                <td class="table__data">Runtime</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">2h 22m</td>
+                            <tr class="table__row">
+                                <td class="table__data">20th Century Fox</td>
+                            <tr class="table__row">
+                                <td class="table__data">Distributor</td>
+                            </tr>
+                                <td class="table__data">Sound Mix</td>
+                                <td class="table__data">Dolby Atmos</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__data">Aspect Ratio</td>
+                                <td class="table__data">Scope (2.35:1)</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                <section class="movie-reviews">
+                    <h2>Movie Reviews</h2>
+                    <ul>
+                        <li class="movie-reviews__review">
+                            The Guardian: "Ridley Scott returns to form with this gripping and visually stunning space adventure that gives Matt Damon one of his best ever roles" (Peter Bradshaw).
+                        </li>
+                            The New York Times: "For anyone who misses the gee-whiz exuberance of space travel, The Martian is the ticket" (A.O. Scott).
+                        <li class="movie-reviews__review">
+                        </li>
+                        <li class="movie-reviews__review">
+                            Rolling Stone: "The Martian is a real-live, grade-A, genuinely thrilling adventure, featuring one of the most memorable and purely enjoyable performances in Matt Damon's career" (Peter Travers)
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="movie-links">
+                    <h2>Stay Connected: Follow 'The Martian' on Social Media and Visit the Official Website</h2>
+                    <a class="movie-link__link" href="https://www.foxmovies.com/movies/the-martian">Official website</a>
+                    <a class="movie-link__link" href="https://twitter.com/MartianMovie">Twitter</a>
+                    <a class="movie-link__link" href="https://www.facebook.com/MartianMovie/">Facebook</a>
+                    <a class="movie-link__link" href="https://www.instagram.com/martianmovie/">Instagram</a>
+                    <a class="movie-link__link" href="https://www.youtube.com/user/foxmovies">YouTube</a>
+                </section>
+                  
 
             </article>
         </main>
