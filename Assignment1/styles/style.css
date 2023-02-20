@@ -48,21 +48,9 @@ body {
     margin-top: 15vh;
 }
 
-.title {
-    text-transform: uppercase;
-    letter-spacing: 1.5;
-    font-size: 3rem;
-    text-align: center;
-    color:white;
-
-}
-
 .section {
-    margin: 30px 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 25px 0;
-    background-color: #EDEDED;
+    padding: 20px 5px;
+    background-color: #F1F2F3;
 }
 
 .section__title {
@@ -76,13 +64,8 @@ body {
     color: #555;
 }
 
-article {
-
-    padding: 10px;
-    overflow: hidden;
-    background-image: url("../images/banner.jpg");
-    background-position: center;
-    background-size: cover;
+.subtitle {
+    font-style: italic;
 }
 
 
@@ -90,18 +73,6 @@ article {
 .table__row:nth-child(even) {
     background-color: #ddd;
 }
-
-/*-------------------- 1.2 Homepage styles --------------------*/
-
-.banner-container {
-    display: none;
-}
-
-.banner-container__banner {
-
-}
-
-
 
 /*  header & navbar styles */
 
@@ -117,6 +88,7 @@ article {
     top: 0;
     width: 100vw;
     flex-direction: column;
+    z-index: 999;
 }
 
 .logo-container {
@@ -153,9 +125,37 @@ article {
     font-weight: bold;
 }
 
-/*-------------------- 1.3 Homepage styles --------------------*/
+/*-------------------- 1.2 Homepage styles --------------------*/
 
-/*-------------------- 1.4 Summary styles --------------------*/
+.title-homepage {
+    text-transform: uppercase;
+    letter-spacing: 1.5;
+    font-size: 3rem;
+    text-align: center;
+    position: absolute;
+    top: 20vh;
+    width:100%;
+    color: white;
+}
+
+.banner-container {
+    height: 30vh;
+    width: 100%;
+    margin: 0;
+}
+
+.banner-container__banner {
+    height: 100%;
+}
+
+
+
+
+
+
+/*-------------------- 1.3 Summary styles --------------------*/
+
+/*-------------------- 1.4 Ratings styles --------------------*/
 
 /*-------------------- 1.5 Cast styles --------------------*/
 
