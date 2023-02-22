@@ -190,6 +190,22 @@ body {
     font-style: italic;
 }
 
+.movie-links__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.movie-links__link {
+margin-right: 10px;
+}
+
+.movie-links__img{
+    width: 100%;
+    height: 100%;
+}
+
+
 
 /*-------------------- 1.3 Summary styles --------------------*/
 
