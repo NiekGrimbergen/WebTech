@@ -142,6 +142,13 @@ body {
     color: white;
 }
 
+.section__list-display{
+    padding: 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 .banner-container {
     height: 30vh;
     width: 100%;
@@ -156,10 +163,6 @@ body {
 .section__display-images{
     border-radius: 100%;
     list-style-type: none;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .section__display-img{
@@ -169,6 +172,22 @@ body {
 
 .section__display-text{
     align-items: center;
+    display: flex;
+    flex-flow: column;
+}
+
+.section__block-quote{
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 5px;
+    border: 1px black;
+    border-style: solid;
+    border-radius: 10%;
+}
+
+.section__quote{
+    font-style: italic;
 }
 
 
