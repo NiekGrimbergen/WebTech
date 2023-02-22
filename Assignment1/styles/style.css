@@ -189,6 +189,24 @@ body {
 .section__quote{
     font-style: italic;
 }
+.section__button-block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.section__button {
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: var(--primary-color);
+  }
+  
+  .section__button:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+  }
 
 .movie-links__block {
     display: flex;
