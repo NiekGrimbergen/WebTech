@@ -156,12 +156,19 @@ body {
 .section__display-images{
     border-radius: 100%;
     list-style-type: none;
-    text-align: center; 
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .section__display-img{
     width: 100%;
     clip-path: circle();
+}
+
+.section__display-text{
+    align-items: center;
 }
 
 
@@ -171,15 +178,12 @@ body {
 
 /*-------------------- 1.5 Cast styles --------------------*/
 
-.content-cast{
-    padding-left: 10%;
-    padding-right: 10%;
+.content__cast{
     text-align: left;
 }
 
 .title-cast{
     font-size: 48;
-    padding-top: 15vh;
     text-align: center;
 }
 
