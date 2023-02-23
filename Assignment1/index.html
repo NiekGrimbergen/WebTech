@@ -1,10 +1,13 @@
-<html>
+<html lang="en">
     <head>
+        <!-- verwijder dit: -->
+        <script type="text/javascript" src="https://livejs.com/live.js"></script>
+
         <meta charset="UTF-8">
         <!-- Moet voor elke pagina apart -->
         <title>The Martian | Homepage</title>
         <meta name="description" content="">
-        <!-- ------------------------------>
+
         <meta name="author" content="Mattijs Gietman, Niek Grimbergen and Sileman Patang">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -70,26 +73,33 @@
                     </p>
                 </section>
 
-                <section class="section">
+                <section class="section cast">
                     <h2 class="section__title">Meet the crew!</h2>
-                    <ul class="section__list-display">
-                        <li class="section__display-images">
-                            <a href="cast.html#matt_damon">
-                                <img src="images/matt_damon_FP.jpg" class="section__display-img"> 
+                    <ul class="cast__list">
+                        <li class="cast__member">
+                            <a class="cast__link" href="cast.html#matt_damon">
+                                <figure class="cast__figure">
+                                    <img class="cast__img" src="images/matt_damon_FP.jpg" >
+                                    <figcaption class="cast__caption">Matt Damon as Mark Watney</figcaption>
+                                </figure>
                             </a>
-                            <figcaption class="section__display-text">Matt Damon as Mark Watney</figcaption>
                         </li>
-                        <li class="section__display-images">
-                            <a href="cast.html#jessica_chastain">
-                                <img src="images/jessica_chastain_FP.jpg" class="section__display-img">
+                        <li class="cast__member">
+                            <a class="cast__link" href="cast.html#jessica_chastain">
+                                <figure class="cast__figure">
+                                    <img class="cast__img" src="images/jessica_chastain_FP.jpg">
+                                    <figcaption class="cast__caption">Jessica Chastain as Melissa Lewis</figcaption>
+                                </figure>
                             </a>
-                            <figcaption class="section__display-text">Jessica Chastain as Melissa Lewis</figcaption>
                         </li>
-                        <li class="section__display-images">
-                            <a href="cast.html#kristen_wiig">
-                                <img src="images/Kristin_Wiig_FP.jpg" class="section__display-img">
+                        <li class="cast__member">
+                            <a class="cast__link" href="cast.html#kristen_wiig">
+                                <figure class="cast__figure">
+                                    <img class="cast__img" src="images/Kristin_Wiig_FP.jpg">
+                                    <figcaption class="cast__caption">Kristen Wiig as Annie Montrose</figcaption>
+                                </figure>
                             </a>
-                            <figcaption class="section__display-text">Kristen Wiig as Annie Montrose</figcaption>
+
                         </li>
                     </ul>
                 </section>
@@ -99,7 +109,7 @@
                     <p class="section__paragraph"> <!-- modifier hier misschien-->
                         Experience The Martian today! Watch the movie now, or own it on DVD/Blue-ray. Click below to find out more!
                     </p>
-                    <div class="section__block-block">
+                    <div class="section__button-block">
                         <a href="https://www.primevideo.com/detail/The-Martian/0M6MWW4RRVCA9P6DAIVEOX2WMO">
                             <button class="section__button">
                                 Prime
@@ -182,7 +192,7 @@
 
                 <section class="section">
                     <h2 class="section__title">Movie Reviews</h2>
-                    <figure class="section__block-quote">           
+                    <figure class="section__block-quote">
                         <blockquote cite="https://www.theguardian.com/film/2015/oct/04/the-martian-review-matt-damon-shines-stranded-astronaut" class="section__quote">
                             Ridley Scott returns to form with this gripping and visually stunning space adventure that gives Matt Damon one of his best ever roles
                         </blockquote>
