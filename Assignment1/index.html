@@ -1,11 +1,12 @@
-<html>
-    
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <!-- Moet voor elke pagina apart -->
         <title>The Martian | Homepage</title>
-        <meta name="description" content="">
-        <!-- ------------------------------>
+        <meta name="description" content="The landing page of this website is the perfect place to learn all about the epic movie The Martian. It contains a section dedicated to the movie itself, highlighting its thrilling plot and the incredible cast. In addition, it provides information about each of the actors and their roles in the movie, as well as a comprehensive overview of the movie's themes and its impact. You can also find reviews and awards that the movie has received. All of this information is sure to give you an in-depth look at the movie and its impact on the world.">
+        <meta name="keywords" content="Martian, Movie, Plot, Cast, Reviews">
+
         <meta name="author" content="Mattijs Gietman, Niek Grimbergen and Sileman Patang">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,7 +19,7 @@
 
             <!-- Logo can come here -->
             <figure class="logo-container">
-                <img class="logo-container__logo" src="images/logo.png" alt="Logo reading &quot;The Martian&quot;"/>
+                <img class="logo-container__logo" src="images/logo.png" alt="Logo reading &quot;The Martian&quot;">
             </figure>
 
             <!-- nav-tag for navigation between our five pages and is shared among pages -->
@@ -51,15 +52,16 @@
             <!-- article-tag is to announce that the page-specific part starts -->
             <article id="homepage">
 
-                <!-- Maybe add a banner here -->
-                <figure class="banner-container">
-                    <img class="banner-container__banner" id="banner-img" src="images/banner.jpg" alt=""/>
+                <!-- Refactored -->
+                <figure class="banner">
+                    <img class="banner__img" src="images/banner.jpg" alt="">
                 </figure>
+                
 
+                <h1 class="title title--white">The Martian</h1>
 
-                <h1 class="title-homepage">The Martian</h1>
-
-                <section class="section">
+                <!-- Refactored -->
+                <section class="section introduction">
                     <h2 class="section__title">Bring Him Home!</h2>
                     <p class="section__paragraph">
                         The martian is a science fiction movie directed by Ridley Scott and starring Matt Damon as Mark Watney,
@@ -71,42 +73,59 @@
                     </p>
                 </section>
 
-                <section class="section">
+                <!-- Refactored -->
+                <section class="section cast">
                     <h2 class="section__title">Meet the crew!</h2>
-                    <ul class="section__list-display">
-                        <li class="section__display-images">
-                            <img src="images/matt_damon_FP.jpg" class="section__display-img">
-                            <figcaption class="section__display-text">Matt Damon as Mark Watney</figcaption>
+                    <ul class="cast__list">
+                        <li class="cast__member">
+                            <a class="cast__link" href="cast.html#matt_damon">
+                                <figure class="cast__figure">
+                                    <img class="cast__img" src="images/matt_damon_FP.jpg" >
+                                    <figcaption class="cast__caption">Matt Damon as Mark Watney</figcaption>
+                                </figure>
+                            </a>
                         </li>
-                        <li class="section__display-images">
-                            <img src="images/jessica_chastain_FP.jpg" class="section__display-img">
-                            <figcaption class="section__display-text">Jessica Chastain as Melissa Lewis</figcaption>
+                        <li class="cast__member">
+                            <a class="cast__link" href="cast.html#jessica_chastain">
+                                <figure class="cast__figure">
+                                    <img class="cast__img" src="images/jessica_chastain_FP.jpg">
+                                    <figcaption class="cast__caption">Jessica Chastain as Melissa Lewis</figcaption>
+                                </figure>
+                            </a>
                         </li>
-                        <li class="section__display-images">
-                            <img src="images/Kristin_Wiig_FP.jpg" class="section__display-img">
-                            <figcaption class="section__display-text">Kristen Wiig as Annie Montrose</figcaption>
+                        <li class="cast__member">
+                            <a class="cast__link" href="cast.html#kristen_wiig">
+                                <figure class="cast__figure">
+                                    <img class="cast__img" src="images/Kristin_Wiig_FP.jpg">
+                                    <figcaption class="cast__caption">Kristen Wiig as Annie Montrose</figcaption>
+                                </figure>
+                            </a>
+
                         </li>
                     </ul>
                 </section>
 
-                <section class="section">
+                <!-- Refactored: buttons moeten nog uit a gehaald worden volgens w3c (dus nu a gestyled als buttons) -->
+                <section class="section streams">
                     <h2 class="section__title">Watch The Martian here!</h2>
                     <p class="section__paragraph"> <!-- modifier hier misschien-->
                         Experience The Martian today! Watch the movie now, or own it on DVD/Blue-ray. Click below to find out more!
                     </p>
-                    <button class="section__button">
-                        Prime Video
-                    </button>
-                    <button class="section__button">
-                        Youtube
-                    </button>
-                    <button class="section__button">
-                        Amazon
-                    </button>
+                    <div class="streams__buttons">
+                        <a class="button button--orange" href="https://www.primevideo.com/detail/The-Martian/0M6MWW4RRVCA9P6DAIVEOX2WMO">
+                            Prime
+                        </a>
+                        <a class="button button--orange" href="https://www.youtube.com/watch?v=8GLnq6bqn10">
+                            Youtube
+                        </a>
+                        <a class="button button--orange" href="https://www.amazon.nl/Martian-Extended-Matt-Damon/dp/B01HI87PKO/ref=sr_1_6?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=13DPY26IID6SS&keywords=the+martian&qid=1677081071&sprefix=the+martia%2Caps%2C199&sr=8-6">
+                            Amazon
+                        </a>
+                    </div>
                 </section>
 
-
-                <section class="section">
+                <!-- Refactored -->
+                <section class="section movie-info">
                     <h2 class="section__title">Movie Info</h2>
                     <table class="table">
                         <tbody class="table__body">
@@ -146,10 +165,10 @@
                                 <td class="table__data">Box Office (Gross USA)</td>
                                 <td class="table__data">$228.4M</td>
                             </tr>
+                            <tr class="table__row">
                                 <td class="table__data">Runtime</td>
                                 <td class="table__data">2h 22m</td>
                             </tr>
-                            <tr class="table__row">
                             <tr class="table__row">
                                 <td class="table__data">Distributor</td>
                                 <td class="table__data">20th Century Fox</td>
@@ -167,38 +186,51 @@
                     </table>
                 </section>
 
-                <section class="section">
+                <!-- Refactored -->
+                <section class="section reviews">
                     <h2 class="section__title">Movie Reviews</h2>
-                    <ul>
-                        <li class="movie-reviews__review">
-                            The Guardian: "Ridley Scott returns to form with this gripping and visually stunning space adventure that gives Matt Damon one of his best ever roles" (Peter Bradshaw).
-                        </li>
-                            The New York Times: "For anyone who misses the gee-whiz exuberance of space travel, The Martian is the ticket" (A.O. Scott).
-                        <li class="movie-reviews__review">
-                        </li>
-                        <li class="movie-reviews__review">
-                            Rolling Stone: "The Martian is a real-live, grade-A, genuinely thrilling adventure, featuring one of the most memorable and purely enjoyable performances in Matt Damon's career" (Peter Travers)
-                        </li>
-                    </ul>
+                    <figure class="reviews__review">
+                        <blockquote class="reviews__quote" cite="https://www.theguardian.com/film/2015/oct/04/the-martian-review-matt-damon-shines-stranded-astronaut">
+                            Ridley Scott returns to form with this gripping and visually stunning space adventure that gives Matt Damon one of his best ever roles
+                        </blockquote>
+                        <figcaption class="reviews__review-author">
+                            Peter Bradshaw, The Guardian
+                        </figcaption>
+                    </figure>
+                    <figure class="reviews__review">
+                        <blockquote class="reviews__quote" cite="https://www.nytimes.com/2015/10/02/movies/review-in-the-martian-marooned-but-not-alone.html">
+                            For anyone who misses the gee-whiz exuberance of space travel, The Martian is the ticket.
+                        </blockquote>
+                        <figcaption class="reviews__review-author">
+                            A.O. Scott, The New York Times
+                        </figcaption>
+                    </figure>
+                    <figure class="reviews__review">
+                        <blockquote class="reviews__quote" cite="https://www.rollingstone.com/tv-movies/tv-movie-reviews/the-martian-122671/">
+                            The Martian is a real-live, grade-A, genuinely thrilling adventure, featuring one of the most memorable and purely enjoyable performances in Matt Damon's career
+                        </blockquote>
+                        <figcaption class="reviews__review-author">
+                            Peter Travers, Rolling Stone
+                        </figcaption>
+                    </figure>
                 </section>
-
-                <section class="section movie-links">
-                    <h2 class="section__title">Stay Connected</h2>
-                    <p class="subtitle">Follow 'The Martian' on Social Media and Visit the Official Website:</p>
-                    <a class="movie-links__link" href="https://www.foxmovies.com/movies/the-martian">Official website</a>
-                    <a class="movie-links__link" href="https://twitter.com/MartianMovie">Twitter</a>
-                    <a class="movie-links__link" href="https://www.facebook.com/MartianMovie/">Facebook</a>
-                    <a class="movie-links__link" href="https://www.instagram.com/martianmovie/">Instagram</a>
-                    <a class="movie-links__link" href="https://www.youtube.com/user/foxmovies">YouTube</a>
-                </section>
-
 
             </article>
         </main>
 
         <!-- footer is for copyright or contact or something like that and is shared among pages -->
         <footer>
-
+            <section class="section section--dark section--top-rounded movie-links">
+                <h2 class="section__title">Stay Connected</h2>
+                <p class="subtitle">Follow 'The Martian' on Social Media and Visit the Official Website:</p>
+                <div class="movie-links__block">
+                    <a class="movie-links__link" href="https://www.foxmovies.com/movies/the-martian"><img src="images/www_icon.svg" class="movie-links__img"></a>
+                    <a class="movie-links__link" href="https://twitter.com/MartianMovie"><img src="images/tw_icon.svg" class="movie-links__img"></a>
+                    <a class="movie-links__link" href="https://www.facebook.com/MartianMovie/"><img src="images/fb_icon.svg" class="movie-links__img"></a>
+                    <a class="movie-links__link" href="https://www.instagram.com/martianmovie/"><img src="images/in_icon.svg" class="movie-links__img"></a>
+                    <a class="movie-links__link" href="https://www.youtube.com/user/foxmovies"><img src="images/yt_icon.svg" class="movie-links__img"></a>
+                </div>
+            </section>
         </footer>
     </body>
 </html>

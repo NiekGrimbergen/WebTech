@@ -48,11 +48,20 @@ body {
 
 .content {
     margin-top: 15vh;
+    background-color: #F1F2F3;
 }
 
 .section {
-    padding: 20px 4vw;
-    background-color: #F1F2F3;
+    padding: 0.5rem 4vw;
+}
+
+.section--dark {
+    background-color: #222;
+    color: white;
+}
+
+.section--top-rounded {
+    border-radius: 25px 25px 0 0;
 }
 
 .section__title {
@@ -71,7 +80,11 @@ body {
     font-style: italic;
 }
 
-
+.table {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
 
 .table__row:nth-child(even) {
     background-color: #ddd;
@@ -122,72 +135,172 @@ body {
 
 .navbar__link {
     text-decoration: none;
-    color: #E0E0E0;
+    color: white;
     padding: 1px 1px;
     display: block;
     font-weight: bold;
     font-family: 'Roboto', helvetica, sans-serif;
 }
 
+.button {
+    padding: 0.5rem 20px;
+    font-size: 18px;
+    border: 0;
+    border-radius: 5%;
+    font-family: 'Roboto', helvetica, sans-serif;
+}
+
+a.button {
+    display: block;
+    text-decoration: none;
+}
+
+.button--orange {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.button--orange:hover {
+background-color: var(--secondary-color);
+cursor: pointer;
+}
+
 /*-------------------- 1.2 Homepage styles --------------------*/
 
-.title-homepage {
+.title {
     text-transform: uppercase;
     letter-spacing: 1.9;
     font-size: 3.5rem;
     text-align: center;
     position: absolute;
-    top: 20vh;
+    top: 5rem;
     width:100%;
+}
+
+.title--white {
     color: white;
 }
 
-.banner-container {
+.title--smaller {
+    font-size: 3rem;
+}
+
+.banner {
     height: 30vh;
     width: 100%;
     margin: 0;
     overflow: hidden;
 }
 
-.banner-container__banner {
+.banner__img {
     width: 100%;
 }
 
-.section__display-images{
-    border-radius: 100%;
+
+
+
+.cast__list {
+    padding: 0px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.cast__member{
+    width: 100%;
+    margin: 1rem 0;
     list-style-type: none;
-    text-align: center; 
+    background: white;
+    border: 1px solid #ccc;
 }
 
-.section__display-img{
+.cast__link {
+    height: 100%;
     width: 100%;
+}
+
+.cast__link, .cast__figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cast__img{
+    max-height: 20rem;
     clip-path: circle();
 }
+
+.reviews__review {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding: 1rem;
+    background: white;
+    border: 1px solid #ccc;
+}
+
+.reviews__quote{
+    font-style: italic;
+}
+
+
+.streams__buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+}
+
+.movie-links__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.movie-links__link {
+margin-right: 10px;
+}
+
+.movie-links__img{
+    width: 100%;
+    height: 100%;
+}
+
 
 
 /*-------------------- 1.3 Summary styles --------------------*/
 .summary-content{
 }
 
-.summary-section__paragraph{ 
-    /* line-height: 1.5; */ 
+.summary-section__img{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+
 }
 
 
 /*-------------------- 1.4 Ratings styles --------------------*/
+.table__link{
+    color: #c97800;
+    text-decoration: none;
+}
+
+.table__link:hover{
+    text-decoration: underline;
+}
+
+.table__link:active{
+    color:#222;
+}
+
 
 /*-------------------- 1.5 Cast styles --------------------*/
 
-.content-cast{
-    padding-left: 10%;
-    padding-right: 10%;
+.content__cast{
     text-align: left;
-}
-
-.title-cast{
-    font-size: 48;
-    padding-top: 15vh;
-    text-align: center;
 }
 
 .cast__element__img {
@@ -217,11 +330,69 @@ body {
     /*-------------------- 2.1 Global styles --------------------*/
 
     /*-------------------- 2.2 Homepage styles --------------------*/
+    .page-header {
+        flex-direction: row;
+        height: 8vh;
+    }
 
-    .banner-container__banner {
+    .navbar {
+        width: 70%;
+    }
+
+    .content {
+        margin-top: 8vh;
+    }
+
+    .banner__banner {
         display: block;
         width: 100%;
     }
+
+    article {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .introduction {
+        order: 1;
+        width: 50%;
+    }
+
+    .streams {
+        order: 2;
+        width: 30%;
+    }
+
+    .cast {
+        order: 3;
+        width: 50%;
+    }
+
+    .cast__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .cast__member {
+        max-width: 40%;
+    }
+
+    .streams__buttons {
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .reviews {
+        order: 5;
+        width: 30%;
+    }
+
+    .movie-info {
+        order: 6;
+    }
+
 
     /*-------------------- 2.3 Homepage styles --------------------*/
 
