@@ -55,6 +55,15 @@ body {
     background-color: #F1F2F3;
 }
 
+.section--dark {
+    background-color: #222;
+    color: white;
+}
+
+.section--top-rounded {
+    border-radius: 25px 25px 0 0;
+}
+
 .section__title {
     font-size: 2rem;
     letter-spacing: 1.6;
@@ -71,7 +80,11 @@ body {
     font-style: italic;
 }
 
-
+.table {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
 
 .table__row:nth-child(even) {
     background-color: #ddd;
@@ -122,7 +135,7 @@ body {
 
 .navbar__link {
     text-decoration: none;
-    color: #E0E0E0;
+    color: white;
     padding: 1px 1px;
     display: block;
     font-weight: bold;
@@ -168,7 +181,9 @@ cursor: pointer;
     color: white;
 }
 
-
+.title--smaller {
+    font-size: 3rem;
+}
 
 .banner {
     height: 30vh;
@@ -265,11 +280,6 @@ margin-right: 10px;
 
 .content__cast{
     text-align: left;
-}
-
-.title-cast{
-    font-size: 48;
-    text-align: center;
 }
 
 .cast__element__img {
