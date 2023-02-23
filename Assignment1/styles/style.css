@@ -166,7 +166,12 @@ body {
 
 
 /*-------------------- 1.3 Summary styles --------------------*/
+.summary-content{
+}
 
+.summary-section__paragraph{ 
+    /* line-height: 1.5; */ 
+}
 
 
 /*-------------------- 1.4 Ratings styles --------------------*/
