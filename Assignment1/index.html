@@ -1,8 +1,6 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- verwijder dit: -->
-        <script type="text/javascript" src="https://livejs.com/live.js"></script>
-
         <meta charset="UTF-8">
         <!-- Moet voor elke pagina apart -->
         <title>The Martian | Homepage</title>
@@ -20,7 +18,7 @@
 
             <!-- Logo can come here -->
             <figure class="logo-container">
-                <img class="logo-container__logo" src="images/logo.png" alt="Logo reading &quot;The Martian&quot;"/>
+                <img class="logo-container__logo" src="images/logo.png" alt="Logo reading &quot;The Martian&quot;">
             </figure>
 
             <!-- nav-tag for navigation between our five pages and is shared among pages -->
@@ -53,14 +51,15 @@
             <!-- article-tag is to announce that the page-specific part starts -->
             <article id="homepage">
 
-                <!-- Maybe add a banner here -->
-                <figure class="banner-container">
-                    <img class="banner-container__banner" id="banner-img" src="images/banner.jpg" alt=""/>
+                <!-- Refactored -->
+                <figure class="banner">
+                    <img class="banner__img" src="images/banner.jpg" alt="">
                 </figure>
 
 
-                <h1 class="title-homepage">The Martian</h1>
+                <h1 class="title title--white">The Martian</h1>
 
+                <!-- Refactored -->
                 <section class="section">
                     <h2 class="section__title">Bring Him Home!</h2>
                     <p class="section__paragraph">
@@ -73,7 +72,7 @@
                     </p>
                 </section>
 
-                <!-- refactorings done -->
+                <!-- Refactored -->
                 <section class="section cast">
                     <h2 class="section__title">Meet the crew!</h2>
                     <ul class="cast__list">
@@ -105,31 +104,26 @@
                     </ul>
                 </section>
 
-                <section class="section">
+                <!-- Refactored: buttons moeten nog uit a gehaald worden volgens w3c (dus nu a gestyled als buttons) -->
+                <section class="section streams">
                     <h2 class="section__title">Watch The Martian here!</h2>
                     <p class="section__paragraph"> <!-- modifier hier misschien-->
                         Experience The Martian today! Watch the movie now, or own it on DVD/Blue-ray. Click below to find out more!
                     </p>
-                    <div class="section__button-block">
-                        <a href="https://www.primevideo.com/detail/The-Martian/0M6MWW4RRVCA9P6DAIVEOX2WMO">
-                            <button class="section__button">
-                                Prime
-                            </button>
+                    <div class="streams__buttons">
+                        <a class="button button--orange" href="https://www.primevideo.com/detail/The-Martian/0M6MWW4RRVCA9P6DAIVEOX2WMO">
+                            Prime
                         </a>
-                        <a href="https://www.youtube.com/watch?v=8GLnq6bqn10">
-                            <button class="section__button">
-                                Youtube
-                            </button>
+                        <a class="button button--orange" href="https://www.youtube.com/watch?v=8GLnq6bqn10">
+                            Youtube
                         </a>
-                        <a href="https://www.amazon.nl/Martian-Extended-Matt-Damon/dp/B01HI87PKO/ref=sr_1_6?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=13DPY26IID6SS&keywords=the+martian&qid=1677081071&sprefix=the+martia%2Caps%2C199&sr=8-6">
-                            <button class="section__button">
-                                Amazon
-                            </button>
+                        <a class="button button--orange" href="https://www.amazon.nl/Martian-Extended-Matt-Damon/dp/B01HI87PKO/ref=sr_1_6?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=13DPY26IID6SS&keywords=the+martian&qid=1677081071&sprefix=the+martia%2Caps%2C199&sr=8-6">
+                            Amazon
                         </a>
                     </div>
                 </section>
 
-
+                <!-- Refactored -->
                 <section class="section">
                     <h2 class="section__title">Movie Info</h2>
                     <table class="table">
@@ -170,10 +164,10 @@
                                 <td class="table__data">Box Office (Gross USA)</td>
                                 <td class="table__data">$228.4M</td>
                             </tr>
+                            <tr class="table__row">
                                 <td class="table__data">Runtime</td>
                                 <td class="table__data">2h 22m</td>
                             </tr>
-                            <tr class="table__row">
                             <tr class="table__row">
                                 <td class="table__data">Distributor</td>
                                 <td class="table__data">20th Century Fox</td>
@@ -191,29 +185,29 @@
                     </table>
                 </section>
 
-                <section class="section">
+                <section class="section reviews">
                     <h2 class="section__title">Movie Reviews</h2>
-                    <figure class="section__block-quote">
-                        <blockquote cite="https://www.theguardian.com/film/2015/oct/04/the-martian-review-matt-damon-shines-stranded-astronaut" class="section__quote">
+                    <figure class="reviews__review">
+                        <blockquote class="reviews__quote" cite="https://www.theguardian.com/film/2015/oct/04/the-martian-review-matt-damon-shines-stranded-astronaut">
                             Ridley Scott returns to form with this gripping and visually stunning space adventure that gives Matt Damon one of his best ever roles
                         </blockquote>
-                        <figcaption class="section__quote-name">
+                        <figcaption class="reviews__review-author">
                             Peter Bradshaw, The Guardian
                         </figcaption>
                     </figure>
-                    <figure class="section__block-quote">
-                        <blockquote cite="https://www.nytimes.com/2015/10/02/movies/review-in-the-martian-marooned-but-not-alone.html" class="section__quote">
+                    <figure class="reviews__review">
+                        <blockquote class="reviews__quote" cite="https://www.nytimes.com/2015/10/02/movies/review-in-the-martian-marooned-but-not-alone.html">
                             For anyone who misses the gee-whiz exuberance of space travel, The Martian is the ticket.
                         </blockquote>
-                        <figcaption class="section__quote-name">
+                        <figcaption class="reviews__review-author">
                             A.O. Scott, The New York Times
                         </figcaption>
                     </figure>
-                    <figure class="section__block-quote">
-                        <blockquote cite="https://www.rollingstone.com/tv-movies/tv-movie-reviews/the-martian-122671/" class="section__quote">
+                    <figure class="reviews__review">
+                        <blockquote class="reviews__quote" cite="https://www.rollingstone.com/tv-movies/tv-movie-reviews/the-martian-122671/">
                             The Martian is a real-live, grade-A, genuinely thrilling adventure, featuring one of the most memorable and purely enjoyable performances in Matt Damon's career
                         </blockquote>
-                        <figcaption class="section__quote-name">
+                        <figcaption class="reviews__review-author">
                             Peter Travers, Rolling Stone
                         </figcaption>
                     </figure>
