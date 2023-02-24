@@ -291,6 +291,11 @@ margin-right: 10px;
 .table__link:active{
     color:#222;
 }
+.table-ratings{
+    width:100%;
+}
+
+
 
 
 /*-------------------- 1.5 Cast styles --------------------*/
@@ -431,9 +436,17 @@ margin-right: 10px;
     }
 
 
-    /*-------------------- 2.3 Homepage styles --------------------*/
+    /*-------------------- 2.3 Summary styles --------------------*/
+    .summary-section__img{
+        width: 75%;
+        max-height: 25rem;
+    }
 
-    /*-------------------- 2.4 Summary styles --------------------*/
+    /*-------------------- 2.4 Ratings styles --------------------*/
+    .table-ratings{
+        width: 50rem;
+        
+    }
 
     /*-------------------- 2.5 Cast styles --------------------*/
 
