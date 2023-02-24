@@ -370,6 +370,23 @@ margin-right: 10px;
 
 @media screen and (min-width: 800px){
     /*-------------------- 2.1 Global styles --------------------*/
+    .movie-links {
+        text-align: center;
+      }
+      
+      .movie-links__block {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      
+      .movie-links__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px;
+        width: 2%;
+      }
 
     /*-------------------- 2.2 Homepage styles --------------------*/
     .page-header {
@@ -398,27 +415,27 @@ margin-right: 10px;
 
     .introduction {
         order: 1;
-        width: 50%;
+        width: 100%;
     }
 
     .streams {
-        order: 2;
+        order: 6;
         width: 30%;
     }
 
     .cast {
-        order: 3;
+        order: 2;
         width: 50%;
     }
 
     .cast__list {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 1em;
     }
 
     .cast__member {
-        max-width: 40%;
+        max-width: 33%;
     }
 
     .streams__buttons {
@@ -427,12 +444,18 @@ margin-right: 10px;
     }
 
     .reviews {
-        order: 5;
+        order: 4;
         width: 30%;
     }
 
     .movie-info {
-        order: 6;
+        order: 5;
+        width: 50%;
+        padding-bottom: 20px;
+    }
+
+    .section__paragraph{
+        font-size: 1.2em;
     }
 
 
@@ -451,5 +474,18 @@ margin-right: 10px;
     /*-------------------- 2.5 Cast styles --------------------*/
 
     /*-------------------- 2.6 Contact styles --------------------*/
+    .contact-information {
+        order: 1;
+        width: 100%;
+    }
 
+    .contact {
+        order: 2;
+        width: 100%
+    }
+
+    .adress-block {
+        order: 3;
+        width: 100%;
+    }
 }
