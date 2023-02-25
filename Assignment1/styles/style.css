@@ -169,7 +169,7 @@ cursor: pointer;
 
 .title {
     text-transform: uppercase;
-    letter-spacing: 1.9;
+    letter-spacing: 1.9;  /*hier nog een unit achter */
     font-size: 3.5rem;
     text-align: center;
     position: absolute;
@@ -224,6 +224,7 @@ cursor: pointer;
 
 .cast__img{
     max-height: 20rem;
+    max-width: 100%;
     clip-path: circle();
 }
 
@@ -296,8 +297,6 @@ margin-right: 10px;
 }
 
 
-
-
 /*-------------------- 1.5 Cast styles --------------------*/
 .content__cast{
     text-align: left;
@@ -309,23 +308,10 @@ margin-right: 10px;
     max-height: 100%;
 }
 
-.cast__element__acting-career{
-    font-size: 18;
-}
-.cast__element__in-martian{
-    font-size: 18;
-}
-
-.cast__element__title{
-    padding: 20px;
-    text-align: center;
-    font-size: 40;
-}
-
 /*-------------------- 1.6 Contact styles --------------------*/
 
 .contact-form {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -362,7 +348,7 @@ margin-right: 10px;
     }
 
 .section.adress-block {
-    padding: 20px;
+    padding-bottom: 20px;
     text-align: center;
     }
 
@@ -474,18 +460,12 @@ margin-right: 10px;
     /*-------------------- 2.5 Cast styles --------------------*/
 
     /*-------------------- 2.6 Contact styles --------------------*/
-    .contact-information {
-        order: 1;
-        width: 100%;
+    .contact-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
-
-    .contact {
-        order: 2;
-        width: 100%
-    }
-
-    .adress-block {
-        order: 3;
-        width: 100%;
+    .adress-block__text{
+        text-align: left;
     }
 }
