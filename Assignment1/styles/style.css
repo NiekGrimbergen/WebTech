@@ -442,8 +442,8 @@ margin-right: 10px;
 
     /*-------------------- 2.3 Summary styles --------------------*/
     .summary-section__img{
-        max-width: 75%;
-        max-height: 25rem;
+        max-width: 40%;
+        max-height: 40%;
     }
 
     /*-------------------- 2.4 Ratings styles --------------------*/
