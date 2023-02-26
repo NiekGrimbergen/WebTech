@@ -298,9 +298,6 @@ margin-right: 10px;
 
 
 /*-------------------- 1.5 Cast styles --------------------*/
-.content__cast{
-    text-align: left;
-}
 
 .cast__element__img {
     display: block;
@@ -330,17 +327,15 @@ margin-right: 10px;
     margin-bottom: 20px;
     border: 2px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1rem;
     }
 
 .form-button {
     padding: 10px 20px;
     background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    color: white;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     }
 
 .form-button:hover {
@@ -447,7 +442,7 @@ margin-right: 10px;
 
     /*-------------------- 2.3 Summary styles --------------------*/
     .summary-section__img{
-        width: 75%;
+        max-width: 75%;
         max-height: 25rem;
     }
 
