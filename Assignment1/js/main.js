@@ -1,69 +1,34 @@
-class movie {
-    constructor(director, writer, actors) {
-        this.director = director;
-        this.writer = writer;
-        this.actors = actors;
+import {mattDamon} from './data.js';
+
+
+const main = document.querySelector('main');
+const article = document.createElement('article');
+main.className = 'content';
+main.appendChild(article);
+const h1 = document.createElement('h1');
+h1.textContent = 'info';
+h1.className = 'title';
+article.appendChild(h1);
+
+function addArtist(article, artist) {
+    var section = document.createElement('section');
+    section.className = 'section';
+    article.appendChild(section);
+
+    var header = document.createElement('h2');
+    header.className = 'section__title';
+    header.textContent = artist.name;
+    section.appendChild(header);
+
+    var movies = document.createElement('ul');
+    movies.className = 'actor__movies';
+    section.appendChild(movies);
+
+    for (var i = 0; i < artist.movies.length; i++) {
+        let movie = document.createElement('li');
+        movie.textContent = artist.movies[i];
+        movies.appendChild(movie);
     }
 }
 
-class artist {
-    constructor(name, yearOfBirth) {
-        this.name = name;
-        this.yearOfBirth = yearOfBirth;
-    }
-}
-
-class director extends artist {
-    constructor(name, yearOfBirth, movies) {
-        super(name, yearOfBirth);
-        this.movies = movies;
-    }
-}
-
-class writer extends artist {
-    constructor(name, yearOfBirth, books) {
-        super(name, yearOfBirth);
-        this.books = books;
-    }
-}
-
-class actor extends artist {
-    constructor(name, yearOfBirth, movies) {
-        super(name, yearOfBirth);
-        this.movies = movies;
-    }
-}
-
-const mattDamon = new actor("Matt Damon", 1970, [
-  "Good Will Hunting",
-  "Saving Private Ryan",
-  "The Talented Mr. Ripley",
-  "Ocean's Eleven",
-  "The Bourne Identity",
-  "The Departed",
-  "The Bourne Ultimatum",
-  "Invictus",
-  "The Martian",
-  "Jason Bourne",
-  "Manchester by the Sea",
-  "Downsizing",
-  "Ford v Ferrari"
-]);
-
-const ridleyScott = new director("Ridley Scott", 1937, [
-  "Alien",
-  "Blade Runner",
-  "Thelma & Louise",
-  "Gladiator",
-  "Black Hawk Down",
-  "American Gangster",
-  "Prometheus",
-  "The Martian",
-  "Alien: Covenant"
-]);
-
-const andyWeir = new writer("Andy Weir", 1972, [
-  "Artemis",
-  "Project Hail Mary",
-  "Zhekas"
-]);
+addArtist(article, mattDamon);
