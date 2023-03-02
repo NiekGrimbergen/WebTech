@@ -1,4 +1,4 @@
-import {mattDamon} from './data.js';
+import {mattDamon, ridleyScott, andyWeir} from './data.js';
 
 
 
@@ -31,28 +31,45 @@ function newSectionHeader(section, content) {
     section.appendChild(header);
 }
 
-function newMovieList(section, movies) {
+//creates a <ul> containing an artists work
+function newTitlesList(section, titles, type) {
+    //add a header to the list
+    var typeOfWork = document.createElement('h3');
+    typeOfWork.textContent = type + ":";
+    section.appendChild(typeOfWork);
+    //create the list itself
     var list = document.createElement('ul');
     list.className = 'actor__movies';
     section.appendChild(list);
-
-    for (var i = 0; i < movies.length; i++) {
+    //add the titles to the ul as li's
+    for (var i = 0; i < titles.length; i++) {
         let movie = document.createElement('li');
-        movie.textContent = movies[i];
+        movie.textContent = titles[i];
         list.appendChild(movie);
     }
 }
 
-//creates a section about an actor inside a specified article
-function addActor(article, actor) {
+//creates a section about an artist inside a specified article
+function newArtistSection(article, artist) {
     var section = newSection(article);
-    newSectionHeader(section, actor.name);
-    newMovieList(section, actor.movies);
+    newSectionHeader(section, artist.name);
+    //some artists have movies, some have books, let's add them
+    if (artist.movies) {
+        newTitlesList(section, artist.movies, "Movies");
+    }
+    if (artist.books) {
+        newTitlesList(section, artist.books, "Books");
+    }
 }
 
+//set the classname of main to content for our css
 const main = document.querySelector('main');
 main.className = 'content';
 
+//the assignment requires to build articles with js:
 const info = createArticle(main, 'info');
 
-addActor(info, mattDamon);
+//let's add some artists to our info article
+newArtistSection(info, mattDamon);
+newArtistSection(info, ridleyScott);
+newArtistSection(info, andyWeir);
