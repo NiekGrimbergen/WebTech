@@ -30,8 +30,9 @@ class writer extends artist {
 }
 
 class actor extends artist {
-    constructor(name, yearOfBirth, movies) {
+    constructor(name, yearOfBirth, photo, movies) {
         super(name, yearOfBirth);
         this.movies = movies;
+        this.photo = photo;
     }
 }

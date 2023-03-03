@@ -1,7 +1,6 @@
-import {mattDamon, ridleyScott, andyWeir} from './data.js';
-
-
-
+import {mattDamon, jessicaChastain, kristenWiig, chiwetelEjiofor,
+    kateMara, sebastianStan, michaelPena, mackenzieDavis,
+    ridleyScott, andyWeir} from './data.js';
 
 //creates an article with a title
 function createArticle(parent, title) {
@@ -49,11 +48,20 @@ function newTitlesList(section, titles, type) {
     }
 }
 
+function actorPhoto(section, photo){
+    var img = document.createElement('img');
+    img.src = photo;
+    section.appendChild(img);
+}
+
 //creates a section about an artist inside a specified article
 function newArtistSection(article, artist) {
     var section = newSection(article);
     newSectionHeader(section, artist.name);
     //some artists have movies, some have books, let's add them
+    if (artist.photo){
+        actorPhoto(section, artist.photo);
+    }
     if (artist.movies) {
         newTitlesList(section, artist.movies, "Movies");
     }
@@ -71,5 +79,12 @@ const info = createArticle(main, 'info');
 
 //let's add some artists to our info article
 newArtistSection(info, mattDamon);
+newArtistSection(info, jessicaChastain);
+newArtistSection(info, kristenWiig);
+newArtistSection(info, chiwetelEjiofor);
+newArtistSection(info, kateMara);
+newArtistSection(info, sebastianStan);
+newArtistSection(info, michaelPena);
+newArtistSection(info, mackenzieDavis);
 newArtistSection(info, ridleyScott);
 newArtistSection(info, andyWeir);
