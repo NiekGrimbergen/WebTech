@@ -2,79 +2,58 @@ import {mattDamon, jessicaChastain, kristenWiig, chiwetelEjiofor,
     kateMara, sebastianStan, michaelPena, mackenzieDavis,
     ridleyScott, andyWeir} from './data.js';
 
+function newElement(type, className, parent, textContent = "") {
+    var el = document.createElement(type);
+    el.className = className;
+    if (textContent) {
+        el.textContent = textContent;
+    }
+    parent.appendChild(el);
+    return el;
+}
+
 //creates an article with a title
 function newArticle(parent, title) {
-    var article = document.createElement('article');
+    var article = newElement('article', title, parent);
     article.id = title;
-    var h1 = document.createElement('h1');
+    var h1 = newElement('h1', 'info', article);
     h1.textContent = 'info';
-    h1.className = 'title';
-    article.appendChild(h1);
-    parent.appendChild(article);
     return article;
 }
 
-//creates a section following the template
-function newSection(article) {
-    var section = document.createElement('section');
-    section.classList.add('artist');
-    article.appendChild(section);
-    return section;
-}
 
-//creates a new section header for a specified section
-function sectionHeader(section, content) {
-    var header = document.createElement('h2');
-    header.className = 'artist__name';
-    header.textContent = content;
-    section.appendChild(header);
-}
+
 
 // creates an figure with img with alt attribute, which is the name of the artist
 function artistPhoto(section, photo, alt) {
-    var fig = document.createElement('figure');
-    fig.className = 'artist__figure';
-    section.appendChild(fig);
-
-    var img = document.createElement('img');
-    img.className = 'artist__img';
+    var fig = newElement('figure', 'artist__figure', section);
+    var img = newElement('img', 'artist__img', fig);
     img.src = photo;
     img.alt = alt;
-    fig.appendChild(img);
 }
 
-function ArtistParTitle(section, text) {
-    var title = document.createElement('h3');
-    title.className = 'artist__h3';
-    title.textContent = text + ":";
-    section.appendChild(title);
-}
-
-function ArtistPar(section, text) {
-    var par = document.createElement('p');
-    par.textContent = text;
-    section.appendChild(par);
-}
-
-function artistSubsection(section, title, content) {
-    ArtistParTitle(section, title);
-    ArtistPar(section, content);
+function artistSection(parent, title, textContent) {
+    newElement('h3', 'artist__h3', parent, title);
+    newElement('p', 'artist__paragraph', parent, textContent);
 }
 
 //creates a section about an artist inside a specified article
 function newArtistSection(article, artist) {
-    var section = newSection(article);
+    var section = newElement('section', 'artist', article);
+    newElement('h2', 'artist__header', section, artist.name);
     artistPhoto(section, artist.photo, artist.name);
-    sectionHeader(section, artist.name);
+    var wrapper = newElement('div', 'artist__wrapper', section);
     //some artists have movies, some have books, let's add them
     if (artist.movies) {
-        artistSubsection(section, "Movies", artist.movies.join(', '));
+        artistSection(wrapper, 'Movies', artist.movies.join(', '));
     }
     if (artist.books) {
-        artistSubsection(section, "Books", artist.books.join(', '));
+        artistSection(wrapper, 'Books', artist.books.join(', '));
     }
-    artistSubsection(section, "Bio", artist.bio);
+    artistSection(wrapper, 'Bio', "Born in " + artist.yearOfBirth + ".", artist.bio);
 }
+
+
 
 //set the classname of main to content for our css
 const main = document.querySelector('main');

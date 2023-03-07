@@ -3,56 +3,59 @@ export { mattDamon, jessicaChastain, kristenWiig, chiwetelEjiofor,
   kateMara, sebastianStan, michaelPena, mackenzieDavis,
   ridleyScott, andyWeir };
 
-const mattDamon = new actor("Matt Damon", 1970, 
-"http://localhost:3000/images/matt_damon.jfif",
-[
-  "Good Will Hunting",
-  "Saving Private Ryan",
-  "The Talented Mr. Ripley",
-  "Ocean's Eleven",
-  "The Bourne Identity",
-  "The Departed",
-  "The Bourne Ultimatum",
-  "Invictus",
-  "The Martian",
-  "Jason Bourne",
-  "Manchester by the Sea",
-  "Downsizing",
-  "Ford v Ferrari"
-]);
+const mattDamon = new actor("Matt Damon",
+                                1970,
+                                "The actor of your dreams",
+                                [
+                                  "Good Will Hunting",
+                                  "Saving Private Ryan",
+                                  "The Talented Mr. Ripley",
+                                  "Ocean's Eleven",
+                                  "The Bourne Identity",
+                                  "The Departed",
+                                  "The Bourne Ultimatum",
+                                  "Invictus",
+                                  "The Martian",
+                                  "Jason Bourne",
+                                  "Manchester by the Sea",
+                                  "Downsizing",
+                                  "Ford v Ferrari"
+                                ]);
+mattDamon.addPhoto("./images/kristen_wiig.jfif");
+const jessicaChastain = new actor("Jessica Chastain",
+                                    1977,
+                                    "Actress blabla",
+                                    [
+                                      "Molly's Game",
+                                      "Interstellar",
+                                      "The Martian",
+                                      "X-Men: Dark Phoenix",
+                                      "The 355",
+                                      "The Forgiven",
+                                      "Take Shelter",
+                                      "It: Chapter Two",
+                                      "Texas Killing Fields",
+                                      "Armageddon Time"
+                                    ]);
+jessicaChastain.addPhoto("./images/kristen_wiig.jfif");
+const kristenWiig = new actor("Kristen Wiig",
+                                1973,
+                                "blabla",
+                                [
+                                  "Bridesmaids",
+                                  "Wonder Woman 1984",
+                                  "Ghostbusters",
+                                  "The Secret Life of Walter Mitty",
+                                  "The Martian",
+                                  "Sausage Party",
+                                  "Paul",
+                                  "Zoolander 2",
+                                  "Anchorman 2: The Legend",
+                                  "MacGruber"
+                                ]);
+kristenWiig.addPhoto("./images/kristen_wiig.jfif");
 
-const jessicaChastain = new actor("Jessica Chastain", 1977, 
-"http://localhost:3000/images/jessica_chastain.jfif",
-[
-  "Molly's Game",
-  "Interstellar",
-  "The Martian",
-  "X-Men: Dark Phoenix",
-  "The 355",
-  "The Forgiven",
-  "Take Shelter",
-  "It: Chapter Two",
-  "Texas Killing Fields",
-  "Armageddon Time"
-]);
-
-const kristenWiig = new actor("Kristen Wiig", 1973, 
-"http://localhost:3000/images/kristen_wiig.jfif",
-[
-  "Bridesmaids",
-  "Wonder Woman 1984",
-  "Ghostbusters",
-  "The Secret Life of Walter Mitty",
-  "The Martian",
-  "Sausage Party",
-  "Paul",
-  "Zoolander 2",
-  "Anchorman 2: The Legend",
-  "MacGruber"
-]);
-
-const chiwetelEjiofor = new actor("Chiwetel Ejiofor", 1977,
-null,
+const chiwetelEjiofor = new actor("Chiwetel Ejiofor", 1977, "",
 [
   "12 Years a Slave",
   "The Boy Who Harnassed the Wind",
@@ -67,8 +70,7 @@ null,
   "Love Actually"
 ]);
 
-const kateMara = new actor("Kate Mara", 1983,
-null,
+const kateMara = new actor("Kate Mara", 1983, "",
 [
   "A Teacher",
   "Shooter",
@@ -85,8 +87,7 @@ null,
   "Captive"
 ])
 
-const sebastianStan = new actor("Sebastian Stan", 1982,
-null,
+const sebastianStan = new actor("Sebastian Stan", 1982, "",
 [
   "Captain America: The Winter Soldier",
   "Pam & Tommy",
@@ -104,8 +105,7 @@ null,
   "Black Widow"
 ])
 
-const michaelPena = new actor("Michael Peña", 1976,
-null,
+const michaelPena = new actor("Michael Peña", 1976, "",
 [
   "End of Watch",
   "CHiPs",
@@ -120,11 +120,10 @@ null,
   "Ant-Man",
   "The Martian",
   "12 Strong",
-  "Moonfall" 
-])  
+  "Moonfall"
+])
 
-const mackenzieDavis = new actor("Mackenzie Davies", 1987,
-null,
+const mackenzieDavis = new actor("Mackenzie Davies", 1987, "",
 [
   "Terminator: Dark Fate",
   "Happiest Season",
@@ -142,7 +141,7 @@ null,
   "Izzy Gets The F*ck Across Town"
 ])
 
-const ridleyScott = new director("Ridley Scott", 1937, [
+const ridleyScott = new director("Ridley Scott", 1937, "", [
   "Alien",
   "Blade Runner",
   "Thelma & Louise",
@@ -154,7 +153,7 @@ const ridleyScott = new director("Ridley Scott", 1937, [
   "Alien: Covenant"
 ]);
 
-const andyWeir = new writer("Andy Weir", 1972, [
+const andyWeir = new writer("Andy Weir", 1972, "", [
   "Artemis",
   "Project Hail Mary",
   "Zhekas"
