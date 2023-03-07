@@ -372,6 +372,17 @@ margin-right: 10px;
     grid-row-start: 2;
 }
 
+.tooltip {
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 1em;
+}
+
 
 
 /*-------------------- 2. Desktop --------------------*/

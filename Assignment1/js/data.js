@@ -21,7 +21,7 @@ const mattDamon = new actor("Matt Damon",
                                   "Downsizing",
                                   "Ford v Ferrari"
                                 ]);
-mattDamon.addPhoto("./images/kristen_wiig.jfif");
+mattDamon.addPhoto("./images/matt_damon.jfif");
 const jessicaChastain = new actor("Jessica Chastain",
                                     1977,
                                     "Actress blabla",
@@ -37,7 +37,7 @@ const jessicaChastain = new actor("Jessica Chastain",
                                       "Texas Killing Fields",
                                       "Armageddon Time"
                                     ]);
-jessicaChastain.addPhoto("./images/kristen_wiig.jfif");
+jessicaChastain.addPhoto("./images/jessica_chastain.jfif");
 const kristenWiig = new actor("Kristen Wiig",
                                 1973,
                                 "blabla",

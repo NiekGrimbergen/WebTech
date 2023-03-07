@@ -40,7 +40,13 @@ function artistSection(parent, title, textContent) {
 //creates a section about an artist inside a specified article
 function newArtistSection(article, artist) {
     var section = newElement('section', 'artist', article);
-    newElement('h2', 'artist__header', section, artist.name);
+    var header = newElement('h2', 'artist__header', section, artist.name);
+    header.addEventListener('mouseenter', (event) => {
+        showDialog(header, artist);
+    });
+    header.addEventListener('mouseleave', (event) => {
+        hideDialog();
+    });
     artistPhoto(section, artist.photo, artist.name);
     var wrapper = newElement('div', 'artist__wrapper', section);
     //some artists have movies, some have books, let's add them
@@ -53,6 +59,25 @@ function newArtistSection(article, artist) {
     artistSection(wrapper, 'Bio', "Born in " + artist.yearOfBirth + ".", artist.bio);
 }
 
+function showDialog(hoverElement, artist) {
+    tooltip.style.display = "flex";
+    // Set the position of the dialog box
+    tooltip.style.left = hoverElement.offsetLeft + 'px';
+    tooltip.style.top = hoverElement.offsetTop + hoverElement.clientHeight + 10 + 'px';
+
+    tooltipTitle.textContent = artist.name;
+    tooltipText.textContent = artist.bio;
+}
+
+function hideDialog() {
+    tooltip.style.display = "none";
+}
+
+//One global tooltip that gets recycled
+const tooltip = newElement('div', 'tooltip', document.body);
+hideDialog();
+const tooltipTitle = newElement('h3', 'tooltip__title', tooltip);
+const tooltipText = newElement('p', 'tooltip__text', tooltip);
 
 
 //set the classname of main to content for our css
