@@ -1,100 +1,107 @@
-import {mattDamon, jessicaChastain, kristenWiig, chiwetelEjiofor,
-    kateMara, sebastianStan, michaelPena, mackenzieDavis,
-    ridleyScott, andyWeir} from './data.js';
-
-function newElement(type, className, parent, textContent = "") {
-    var el = document.createElement(type);
-    el.className = className;
-    if (textContent) {
-        el.textContent = textContent;
-    }
-    parent.appendChild(el);
-    return el;
-}
+import * as artists from './data.js';
 
 //creates an article with a title
 function newArticle(parent, title) {
-    var article = newElement('article', title, parent);
+    var article = document.createElement('article');
     article.id = title;
-    var h1 = newElement('h1', 'info', article);
-    h1.textContent = 'info';
+    parent.appendChild(article);
     return article;
 }
 
 
 
-
-// creates an figure with img with alt attribute, which is the name of the artist
-function artistPhoto(section, photo, alt) {
-    var fig = newElement('figure', 'artist__figure', section);
-    var img = newElement('img', 'artist__img', fig);
-    img.src = photo;
-    img.alt = alt;
+function hide(element) {
+    element.style.display = "none";
 }
 
-function artistSection(parent, title, textContent) {
-    newElement('h3', 'artist__h3', parent, title);
-    newElement('p', 'artist__paragraph', parent, textContent);
+function createTooltip() {
+    const tooltip = document.createElement('div');
+    tooltip.style.display = 'none';
+    tooltip.className = 'tooltip';
+    document.body.appendChild(tooltip);
+
+    const tooltipTitle = document.createElement('h3');
+    tooltipTitle.className = 'tooltip__title';
+    tooltip.appendChild(tooltipTitle);
+
+    const tooltipText = document.createElement('p');
+    tooltipText.className = 'tooltip__text';
+    tooltip.appendChild(tooltipText);
+
+    return tooltip;
 }
 
-//creates a section about an artist inside a specified article
-function newArtistSection(article, artist) {
-    var section = newElement('section', 'artist', article);
-    var header = newElement('h2', 'artist__header', section, artist.name);
-    header.addEventListener('mouseenter', (event) => {
-        showDialog(header, artist);
+
+function setupPage() {
+    //set the classname of main to content for our css
+    const main = document.querySelector('main');
+    main.className = 'content';
+
+    //the assignment requires to build articles with js:
+    const info = newArticle(main, 'info');
+
+    const tooltip = createTooltip();
+
+    //let's add some artists to our info article
+    Object.keys(artists).forEach(function(key) {
+        artists[key].section(info, tooltip);
     });
-    header.addEventListener('mouseleave', (event) => {
-        hideDialog();
+
+    setupStyleMenu();
+}
+
+function setupStyleMenu() {
+    var stylingSelector = document.getElementById("styling-select");
+    window.addEventListener('load', updateSelectors);
+    stylingSelector.addEventListener('change', updateSelectors);
+
+    var valueSelector = document.getElementById("value-select");
+    valueSelector.addEventListener('change', updateStyle);
+}
+
+//updates the menu for the value selector, cuz if we want to change fontsize we have different values
+function updateSelectors() {
+    var stylingSelector = document.getElementById("styling-select");
+    var values = [];
+    switch (stylingSelector.value) {
+        case 'font-size':
+            values = [10,16,20,24,36,48];
+            break;
+        case 'background-color':
+            values = ["red", "green", "blue"];
+            break;
+    }
+    var valueSelector = document.getElementById("value-select");
+    //clear children to make room for other options
+    while (valueSelector.firstChild) {
+        valueSelector.removeChild(valueSelector.firstChild);
+    }
+    values.forEach(val => {
+        let option = document.createElement('option');
+        option.value = val;
+        option.textContent = val;
+        valueSelector.appendChild(option);
+    })
+}
+
+//update the style of all elements using the menu
+function updateStyle() {
+    var elementSelector = document.getElementById("element-select");
+    var stylingSelector = document.getElementById("styling-select");
+    var valueSelector = document.getElementById("value-select");
+
+    var elements = document.querySelectorAll(elementSelector.value);
+
+    elements.forEach(element => {
+        switch (stylingSelector.value) {
+            case 'font-size':
+                    element.style.fontSize = valueSelector.value + 'px';
+                break;
+            case 'background-color':
+                    element.style.backgroundColor = valueSelector.value;
+                break;
+        }
     });
-    artistPhoto(section, artist.photo, artist.name);
-    var wrapper = newElement('div', 'artist__wrapper', section);
-    //some artists have movies, some have books, let's add them
-    if (artist.movies) {
-        artistSection(wrapper, 'Movies', artist.movies.join(', '));
-    }
-    if (artist.books) {
-        artistSection(wrapper, 'Books', artist.books.join(', '));
-    }
-    artistSection(wrapper, 'Bio', "Born in " + artist.yearOfBirth + ".", artist.bio);
 }
 
-function showDialog(hoverElement, artist) {
-    tooltip.style.display = "flex";
-    // Set the position of the dialog box
-    tooltip.style.left = hoverElement.offsetLeft + 'px';
-    tooltip.style.top = hoverElement.offsetTop + hoverElement.clientHeight + 10 + 'px';
-
-    tooltipTitle.textContent = artist.name;
-    tooltipText.textContent = artist.bio;
-}
-
-function hideDialog() {
-    tooltip.style.display = "none";
-}
-
-//One global tooltip that gets recycled
-const tooltip = newElement('div', 'tooltip', document.body);
-hideDialog();
-const tooltipTitle = newElement('h3', 'tooltip__title', tooltip);
-const tooltipText = newElement('p', 'tooltip__text', tooltip);
-
-
-//set the classname of main to content for our css
-const main = document.querySelector('main');
-main.className = 'content';
-
-//the assignment requires to build articles with js:
-const info = newArticle(main, 'info');
-
-//let's add some artists to our info article
-newArtistSection(info, mattDamon);
-newArtistSection(info, jessicaChastain);
-newArtistSection(info, kristenWiig);
-newArtistSection(info, chiwetelEjiofor);
-newArtistSection(info, kateMara);
-newArtistSection(info, sebastianStan);
-newArtistSection(info, michaelPena);
-newArtistSection(info, mackenzieDavis);
-newArtistSection(info, ridleyScott);
-newArtistSection(info, andyWeir);
+window.addEventListener('load', setupPage());
