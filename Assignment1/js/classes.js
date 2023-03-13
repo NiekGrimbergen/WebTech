@@ -18,8 +18,8 @@ class artist {
     addPhoto(url) {
         this.photo = url;
     }
-
-    #newElement(type, className, parent, textContent = "") {
+    //helper function to create dom elements quickly
+    #dom(type, className, parent, textContent = "") {
         var el = document.createElement(type);
         el.className = className;
         if (textContent) {
@@ -29,18 +29,22 @@ class artist {
         return el;
     }
 
+    //shorthand for all artists photo's to dom
     #photo(section, photo, alt) {
-        var fig = this.#newElement('figure', 'artist__figure', section);
-        var img = this.#newElement('img', 'artist__img', fig);
+        var fig = this.#dom('figure', 'artist__figure', section);
+        var img = this.#dom('img', 'artist__img', fig);
         img.src = photo;
         img.alt = alt;
     }
 
+    //shorthand for a subsection with a title
     #subSection(parent, title, textContent) {
-        this.#newElement('h3', 'artist__h3', parent, title);
-        this.#newElement('p', 'artist__paragraph', parent, textContent);
+        this.#dom('h3', 'artist__h3', parent, title);
+        this.#dom('p', 'artist__paragraph', parent, textContent);
     }
 
+
+    // fills the tooltip given with this artists info
     #tooltip(tooltip, hoverElement) {
         tooltip.style.display = "flex";
         // Set the position of the dialog box
@@ -50,7 +54,7 @@ class artist {
         tooltip.children[0].textContent = this.name;
         tooltip.children[1].textContent = this.bio;
     }
-
+    // attaches the tooltip to a specified element
     #attachTooltip(tooltip, attachTo) {
         attachTo.addEventListener('mouseenter', (event) => {
             this.#tooltip(tooltip, attachTo);
@@ -59,19 +63,20 @@ class artist {
             this.#hideTooltip(tooltip);
         });
     }
-
+    // hides tooltip
     #hideTooltip(tooltip) {
         tooltip.style.display = "none";
     }
+
     //creates a section about an artist inside a specified article
     section(parent, tooltip) {
-        var section = this.#newElement('section', 'artist', parent);
-        var header = this.#newElement('h2', 'artist__header', section, this.name);
+        var section = this.#dom('section', 'artist', parent);
+        var header = this.#dom('h2', 'artist__header', section, this.name);
 
         this.#attachTooltip(tooltip, header)
 
         this.#photo(section, this.photo, this.name);
-        var wrapper = this.#newElement('section', 'artist__wrapper', section);
+        var wrapper = this.#dom('section', 'artist__wrapper', section);
         //some artists have movies, some have books, let's add them
         if (this.movies) {
             this.#subSection(wrapper, 'Movies', this.movies.join(', '));
@@ -81,7 +86,6 @@ class artist {
         }
         this.#subSection(wrapper, 'Bio', "Born in " + this.yearOfBirth + ". " + this.bio, this.bio);
     }
-
 }
 
 class director extends artist {
