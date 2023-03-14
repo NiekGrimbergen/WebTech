@@ -1,57 +1,122 @@
-import * as artists from './data.js';
+import {theMartian} from './data.js';
+import {dom, clearChildren, image} from './helper.js';
 
-//creates an article with a title
-function newArticle(parent, title) {
-    var article = document.createElement('article');
-    article.id = title;
-    parent.appendChild(article);
-    return article;
-}
+//loads the rest of the script: it all starts here
+window.addEventListener('load', setupPage());
 
-
-
-function hide(element) {
-    element.style.display = "none";
-}
-
-function createTooltip() {
-    const tooltip = document.createElement('div');
-    tooltip.style.display = 'none';
-    tooltip.className = 'tooltip';
-    document.body.appendChild(tooltip);
-
-    const tooltipTitle = document.createElement('h3');
-    tooltipTitle.className = 'tooltip__title';
-    tooltip.appendChild(tooltipTitle);
-
-    const tooltipText = document.createElement('p');
-    tooltipText.className = 'tooltip__text';
-    tooltip.appendChild(tooltipText);
-
-    return tooltip;
-}
-
-
+// kindof main function
 function setupPage() {
+    //Constructs all the elements that are shared with other pages, but now with dom manipulation
+    constructHeader();
+    if (window.location.pathname == '/info.html') {
+        constructInfo();
+    }
+    constructFooter();
+}
+
+function constructHeader() {
+    const header = document.querySelector('header');
+    const fig = dom('figure', 'logo-container', header);
+    const img = dom('img', 'logo-container__logo', fig);
+    img.src = './images/logo.png';
+    img.alt = "Logo reading &quot;The Martian&quot;";
+    const nav = dom('nav', 'navbar', header);
+
+    let menuPairs = [
+        ['Home', 'index.html'],
+        ['Synopsis', 'summary.html'],
+        ['Ratings', 'ratings.html'],
+        ['Cast', 'cast.html'],
+        ['Info', 'info.html'],
+        ['Contact', 'contact.html']
+    ]
+
+    const list = dom('ul', 'navbar__list', nav)
+
+    for (const pair of menuPairs) {
+        let li = dom('li', 'navbar__item', list);
+        let link = dom('a', 'navbar__link', li, pair[0]);
+        link.href = pair[1];
+    }
+}
+
+function constructInfo() {
     //set the classname of main to content for our css
     const main = document.querySelector('main');
     main.className = 'content';
 
+    const info = dom('article', 'article', main);
+    const banner = dom('figure', 'banner', info);
+    const bannerImg = dom('img', 'banner__img', banner);
+    bannerImg.src = './images/banner.jpg';
+    const title = dom('h1', 'title title--white', info, 'Info');
     //the assignment requires to build articles with js:
-    const info = newArticle(main, 'info');
-
     const tooltip = createTooltip();
 
-    //let's add some artists to our info article
-    Object.keys(artists).forEach(function(key) {
-        artists[key].section(info, tooltip);
-    });
 
+
+    const actorSection = dom('section', 'section', info);
+    const actorHeader = dom('h2', 'section__title', actorSection, 'Actors');
+    actorSection.appendChild(theMartian.listArtists(theMartian.actors, tooltip, 'actor'));
+
+    const writerSection = dom('section', 'section', info);
+    const writerHeader = dom('h2', 'section__title', writerSection, 'Writers');
+    writerSection.appendChild(theMartian.listArtists(theMartian.writers, tooltip, 'writer'));
+
+    const directorSection = dom('section', 'section', info);
+    const directorHeader = dom('h2', 'section__title', directorSection, 'Director');
+    const directorParagraph = dom('p', 'section__paragraph', directorSection);
+    directorParagraph.appendChild(theMartian.director.toolTippedName(tooltip));
+}
+
+function constructFooter() {
+    const footer = document.querySelector('footer');
+
+    // What can the user choose to style?
+
+    let stylableElements = ['body', 'header', 'footer', 'article', 'section'];
+    let stylableProps = ['font-size', 'background-color'];
+
+    let addSelector = (name, list) => {
+        const label = document.createElement('label');
+        label.setAttribute('for', name + '-select');
+        label.textContent = 'Which ' + name + '?';
+
+        const selector = document.createElement('select');
+        selector.name = name;
+        selector.id = name + '-select';
+
+        list.forEach(element => {
+            let option = document.createElement('option');
+            option.value = element;
+            option.textContent = element;
+            selector.appendChild(option);
+        });
+        footer.appendChild(label);
+        footer.appendChild(selector);
+    };
+
+    addSelector('element', stylableElements);
+    addSelector('property', stylableProps);
+    addSelector('value', []);
+    // adds event listeners and logic to the <select>-tags in the footer
     setupStyleMenu();
 }
 
+
+function createTooltip() {
+    const tooltip = dom('div', 'tooltip', document.body);
+    tooltip.style.display = 'none';
+
+    const tooltipTitle = dom('h3', 'tooltip__title', tooltip);
+    const tooltipText = dom('p', 'tooltip__text', tooltip);
+    return tooltip;
+}
+
+
+
 function setupStyleMenu() {
-    var stylingSelector = document.getElementById("styling-select");
+    var stylingSelector = document.getElementById("property-select");
     window.addEventListener('load', updateSelectors);
     stylingSelector.addEventListener('change', updateSelectors);
 
@@ -59,9 +124,10 @@ function setupStyleMenu() {
     valueSelector.addEventListener('change', updateStyle);
 }
 
+
 //updates the menu for the value selector, cuz if we want to change fontsize we have different values
 function updateSelectors() {
-    var stylingSelector = document.getElementById("styling-select");
+    var stylingSelector = document.getElementById("property-select");
     var values = [];
     switch (stylingSelector.value) {
         case 'font-size':
@@ -72,36 +138,34 @@ function updateSelectors() {
             break;
     }
     var valueSelector = document.getElementById("value-select");
-    //clear children to make room for other options
-    while (valueSelector.firstChild) {
-        valueSelector.removeChild(valueSelector.firstChild);
-    }
+    clearChildren(valueSelector);
+    // Add all options to the <select>
     values.forEach(val => {
-        let option = document.createElement('option');
-        option.value = val;
+        let option = dom('option', 'selector__option', valueSelector, val);
         option.textContent = val;
-        valueSelector.appendChild(option);
-    })
+    });
 }
 
 //update the style of all elements using the menu
 function updateStyle() {
     var elementSelector = document.getElementById("element-select");
-    var stylingSelector = document.getElementById("styling-select");
+    var stylingSelector = document.getElementById("property-select");
     var valueSelector = document.getElementById("value-select");
 
     var elements = document.querySelectorAll(elementSelector.value);
 
-    elements.forEach(element => {
-        switch (stylingSelector.value) {
-            case 'font-size':
-                    element.style.fontSize = valueSelector.value + 'px';
-                break;
-            case 'background-color':
-                    element.style.backgroundColor = valueSelector.value;
-                break;
-        }
-    });
-}
+    switch (stylingSelector.value) {
+        case 'font-size':
+            elements.forEach(element => {
+                element.style.fontSize = valueSelector.value + 'px';
+            });
 
-window.addEventListener('load', setupPage());
+            break;
+        case 'background-color':
+            elements.forEach(element => {
+                element.style.backgroundColor = valueSelector.value;
+            });
+            break;
+    }
+
+}

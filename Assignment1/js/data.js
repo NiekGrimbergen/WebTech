@@ -1,7 +1,7 @@
-import { actor, director, writer } from './classes.js';
-export { mattDamon, jessicaChastain, kristenWiig, chiwetelEjiofor,
-  kateMara, sebastianStan, michaelPena, mackenzieDavis,
-  ridleyScott, andyWeir };
+import { actor, director, writer, movie } from './classes.js';
+export { theMartian };
+
+
 
 const mattDamon = new actor("Matt Damon",
                                 1970,
@@ -158,3 +158,6 @@ const andyWeir = new writer("Andy Weir", 1972, "", [
   "Project Hail Mary",
   "Zhekas"
 ]);
+
+const theMartian = new movie('The Martian', 'science fiction, adventure, and drama', 2015, ridleyScott, [andyWeir], [mattDamon, jessicaChastain, kristenWiig, chiwetelEjiofor,
+  kateMara, sebastianStan, michaelPena, mackenzieDavis]);
