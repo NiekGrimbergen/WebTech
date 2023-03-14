@@ -48,7 +48,7 @@ const kristenWiig = new actor("Kristen Wiig",
                                 1973,
                                 "Kristen Wiig is an actress and comedian. She was born on August 22, 1973, in Canandaigua, New York. Wiig got her start in the comedy world as \
                                  a member of the improvisation group: The Groundlings in Los Angeles. She later joined the cast of the sketch series Saturday Night Live, \
-                                 where she became known for her weird and funny characters and impressions.",
+                                 where  she became known for her weird and funny characters and impressions.",
                                 [
                                   "Bridesmaids",
                                   "Wonder Woman 1984",
