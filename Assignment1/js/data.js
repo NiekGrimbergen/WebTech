@@ -160,4 +160,4 @@ const andyWeir = new writer("Andy Weir", 1972, "", [
 ]);
 
 const theMartian = new movie('The Martian', 'science fiction, adventure, and drama', 2015, ridleyScott, [andyWeir], [mattDamon, jessicaChastain, kristenWiig, chiwetelEjiofor,
-  kateMara, sebastianStan, michaelPena, mackenzieDavis]);
+  kateMara, sebastianStan, michaelPena, mackenzieDavis], './images/poster.jfif', 'https://www.youtube.com/watch?v=ej3ioOneTy8', "'The Martian' is a film that follows astronaut Mark Watney, who becomes stranded on Mars after his team leaves him behind thinking that he was dead. He must use his skills and resourcefulness to survive and find a way to signal back to Earth that he's alive.");

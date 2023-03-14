@@ -53,20 +53,30 @@ function constructInfo() {
     //the assignment requires to build articles with js:
     const tooltip = createTooltip();
 
+    let section = (title, contentNode) => {
+        const sect = dom('section', 'section', info);
+        const header = dom('h2', 'section__title', sect, title);
+        sect.appendChild(contentNode);
+        return sect;
+    }
 
+    const genInfoPar = document.createElement('p');
+    genInfoPar.textContent = `This movie is about \'${theMartian.title}\' (genre ${theMartian.genre}). ${theMartian.plot}`;
+    const genInfSctn = section('General Info', genInfoPar);
+    image(genInfSctn, 'poster', theMartian.poster, 'poster of \'The Martian\'')
 
-    const actorSection = dom('section', 'section', info);
-    const actorHeader = dom('h2', 'section__title', actorSection, 'Actors');
-    actorSection.appendChild(theMartian.listArtists(theMartian.actors, tooltip, 'actor'));
+    section('Actors', theMartian.listArtists(theMartian.actors, tooltip, 'actor'));
+    section('Writers', theMartian.listArtists(theMartian.writers, tooltip, 'writer'));
 
-    const writerSection = dom('section', 'section', info);
-    const writerHeader = dom('h2', 'section__title', writerSection, 'Writers');
-    writerSection.appendChild(theMartian.listArtists(theMartian.writers, tooltip, 'writer'));
+    const direcPar = document.createElement('p');
+    direcPar.appendChild(theMartian.director.toolTippedName(tooltip));
+    section('Director', direcPar);
 
-    const directorSection = dom('section', 'section', info);
-    const directorHeader = dom('h2', 'section__title', directorSection, 'Director');
-    const directorParagraph = dom('p', 'section__paragraph', directorSection);
-    directorParagraph.appendChild(theMartian.director.toolTippedName(tooltip));
+    const trailerPar = document.createElement('p');
+    const a = theMartian.trailerLink('Click here to watch the trailer');
+    trailerPar.appendChild(a);
+    section('Trailer', trailerPar);
+
 }
 
 function constructFooter() {

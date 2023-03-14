@@ -1,4 +1,4 @@
-import {dom, image} from './helper.js';
+import {dom} from './helper.js';
 export { movie, director, writer, actor };
 
 
@@ -15,7 +15,7 @@ class movie {
         this.plot = plot;
     }
 
-    listArtists(artists, tooltip, blockName) {
+    listArtists(artists, tooltip, blockName="list") {
         const list = document.createElement('ul');
         list.className = blockName + '__ul';
         //let's add some artists to our info article
@@ -24,6 +24,13 @@ class movie {
             li.appendChild(artist.toolTippedName(tooltip));
         });
         return list;
+    }
+
+    trailerLink(textContent){
+        const a = document.createElement('a');
+        a.href = this.trailer;
+        a.textContent = textContent;
+        return a;
     }
 }
 
