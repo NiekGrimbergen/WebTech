@@ -1,5 +1,7 @@
 import {theMartian} from './data.js';
 import {dom, clearChildren, image} from './helper.js';
+console.log('Run this site on http server (like lite-server), for the imports to work');
+
 
 //loads the rest of the script: it all starts here
 window.addEventListener('load', setupPage());
@@ -67,7 +69,7 @@ function constructInfo(movie) {
     // Creates all sections with correct formatted content
     sectionsFromPairs(sectionContentPairs, info);
 }
-
+// !!!!!!!!!!needs the new figure img manier !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 function bannerAndTitle(parent) {
     const banner = dom('figure', 'banner', parent);
     const bannerImg = dom('img', 'banner__img', banner);
@@ -111,7 +113,7 @@ function constructFooter() {
     const p = dom('p', 'subtitle', section, "Follow 'The Martian' on Social Media and Visit the Official Website:");
     const div = dom('div', 'movie-links__block', section);
 
-    let linkPairs = [
+    const linkPairs = [
         ['https://www.foxmovies.com/movies/the-martian', 'images/www_icon.svg', 'A picture of the icon of a website'],
         ['https://twitter.com/MartianMovie', 'images/tw_icon.svg', 'A picture of the icon of Wwitter'],
         ['https://www.facebook.com/MartianMovie/', 'images/fb_icon.svg', 'A picture of the icon of a Facebook'],
@@ -158,7 +160,7 @@ function constructFooter() {
 }
 
 
-
+// Creates a div inside the body that functions as tooltip/dialog and hides it
 function createTooltip() {
     const tooltip = dom('div', 'tooltip', document.body);
     tooltip.style.display = 'none';
@@ -169,9 +171,9 @@ function createTooltip() {
 }
 
 
-
+// Loads the styling menu in the footer
 function setupStyleMenu() {
-    var stylingSelector = document.getElementById("property-select");
+    const stylingSelector = document.getElementById("property-select");
     window.addEventListener('load', updateSelectors);
     stylingSelector.addEventListener('change', updateSelectors);
 
@@ -182,8 +184,9 @@ function setupStyleMenu() {
 
 //updates the menu for the value selector, cuz if we want to change fontsize we have different values
 function updateSelectors() {
-    var stylingSelector = document.getElementById("property-select");
+    const stylingSelector = document.getElementById("property-select");
     var values = [];
+    // Sets the values for inside the third selector
     switch (stylingSelector.value) {
         case 'font-size':
             values = [10,16,20,24,36,48];
@@ -192,7 +195,8 @@ function updateSelectors() {
             values = ["red", "green", "blue"];
             break;
     }
-    var valueSelector = document.getElementById("value-select");
+    const valueSelector = document.getElementById("value-select");
+    // Removes existing values so that the list doesnt grow with values that are not possible
     clearChildren(valueSelector);
     // Add all options to the <select>
     values.forEach(val => {
@@ -203,12 +207,12 @@ function updateSelectors() {
 
 //update the style of all elements using the menu
 function updateStyle() {
-    var elementSelector = document.getElementById("element-select");
-    var stylingSelector = document.getElementById("property-select");
-    var valueSelector = document.getElementById("value-select");
-
-    var elements = document.querySelectorAll(elementSelector.value);
-
+    const elementSelector = document.getElementById("element-select");
+    const stylingSelector = document.getElementById("property-select");
+    const valueSelector = document.getElementById("value-select");
+    // Get all elements that are selected with the menu
+    const elements = document.querySelectorAll(elementSelector.value);
+    // Set style for specified element by the specified value
     switch (stylingSelector.value) {
         case 'font-size':
             elements.forEach(element => {
