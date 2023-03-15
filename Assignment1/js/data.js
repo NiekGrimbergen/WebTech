@@ -1,8 +1,6 @@
 import { actor, director, writer, movie } from './classes.js';
 export { theMartian };
 
-
-
 const mattDamon = new actor("Matt Damon",
                                 1970,
                                 "Matt Damon is an American actor, screenwriter, and producer. He was born on October 8, 1970, in Cambridge, Massachusetts. \
@@ -23,8 +21,9 @@ const mattDamon = new actor("Matt Damon",
                                   "Manchester by the Sea",
                                   "Downsizing",
                                   "Ford v Ferrari"
-                                ]);
-mattDamon.addPhoto("./images/matt_damon.jfif");
+                              ],
+                          "./images/matt_damon.jfif");
+
 const jessicaChastain = new actor("Jessica Chastain",
                                     1977,
                                     "Jessica Chastain's movies was Born on March 24, 1977, in Sacramento, California, the American actress first appeared on TV in the mid-2000s with roles in 'ER' \
@@ -42,8 +41,9 @@ const jessicaChastain = new actor("Jessica Chastain",
                                       "It: Chapter Two",
                                       "Texas Killing Fields",
                                       "Armageddon Time"
-                                    ]);
-jessicaChastain.addPhoto("./images/jessica_chastain.jfif");
+                                  ],
+                              "./images/jessica_chastain.jfif");
+
 const kristenWiig = new actor("Kristen Wiig",
                                 1973,
                                 "Kristen Wiig is an actress and comedian. She was born on August 22, 1973, in Canandaigua, New York. Wiig got her start in the comedy world as \
@@ -60,8 +60,9 @@ const kristenWiig = new actor("Kristen Wiig",
                                   "Zoolander 2",
                                   "Anchorman 2: The Legend",
                                   "MacGruber"
-                                ]);
-kristenWiig.addPhoto("./images/kristen_wiig.jfif");
+                              ],
+                          "./images/kristen_wiig.jfif");
+
 
 const chiwetelEjiofor = new actor("Chiwetel Ejiofor",
                                 1977,
@@ -84,7 +85,7 @@ const chiwetelEjiofor = new actor("Chiwetel Ejiofor",
                                 ]);
 
 const kateMara = new actor("Kate Mara",
-                                1983, 
+                                1983,
                                 "Kate Mara is an American actress, born on February 27, 1983, in Bedford, New York. She began her acting career in television, with roles in shows like Law & Order: \
                                 Special Victims Unit and 24, before transitioning to film. Mara has since starred in several successful films, including Brokeback Mountain, The Martian, and Megan Leavey. \
                                 Mara is also a producer and co-founded the production company, Deadpan Pictures. She is known for her activism work and has been involved in several \
@@ -103,7 +104,7 @@ const kateMara = new actor("Kate Mara",
                                   "Iron Clad",
                                   "Pose",
                                   "Captive"
-                                ])
+                              ]);
 
 const sebastianStan = new actor("Sebastian Stan",
                                 1982,
@@ -124,10 +125,10 @@ const sebastianStan = new actor("Sebastian Stan",
                                   "Captain America: New World Order",
                                   "Avengers: Infinity War",
                                   "Black Widow"
-                                ])
+                              ]);
 
-const michaelPena = new actor("Michael Peña", 
-                                1976, 
+const michaelPena = new actor("Michael Peña",
+                                1976,
                                 "Michael Peña is a Mexican-American actor born on January 13, 1976, in Chicago, Illinois. He began his acting career in the late 1990s \
                                 and has since appeared in numerous films, including Crash, Ant-Man, and The Martian. Peña has received critical acclaim for his performances, \
                                 earning nominations for several awards, including a Primetime Emmy Award for his role in the television series, Narcos: Mexico.",
@@ -146,35 +147,36 @@ const michaelPena = new actor("Michael Peña",
                                   "The Martian",
                                   "12 Strong",
                                   "Moonfall"
-                                ])
+                              ]);
 
-const mackenzieDavis = new actor("Mackenzie Davies", 
-                                1987, 
-                                "Mackenzie Davis is a Canadian actress, born on April 1, 1987, in Vancouver, British Columbia. She began her acting career in 2012 \
-                                with a supporting role in the film Smashed. She gained wider recognition for her role as Cameron Howe in the television series Halt \
-                                and Catch Fire and has since starred in several successful films, including Blade Runner 2049, Tully, and Terminator: Dark Fate.",
-                                [
-                                  "Terminator: Dark Fate",
-                                  "Happiest Season",
-                                  "The Turning",
-                                  "Blade Runner 2049",
-                                  "Tully",
-                                  "The Martian",
-                                  "That Awkward Moment",
-                                  "Kitchen Sink",
-                                  "Irresistable",
-                                  "What If",
-                                  "Always Shine",
-                                  "Breathe In",
-                                  "Alpha Gang",
-                                  "Izzy Gets The F*ck Across Town"
-                                ])
+const mackenzieDavis = new actor("Mackenzie Davies",
+                                    1987,
+                                    "Mackenzie Davis is a Canadian actress, born on April 1, 1987, in Vancouver, British Columbia. She began her acting career in 2012 \
+                                    with a supporting role in the film Smashed. She gained wider recognition for her role as Cameron Howe in the television series Halt \
+                                    and Catch Fire and has since starred in several successful films, including Blade Runner 2049, Tully, and Terminator: Dark Fate.",
+                                    [
+                                      "Terminator: Dark Fate",
+                                      "Happiest Season",
+                                      "The Turning",
+                                      "Blade Runner 2049",
+                                      "Tully",
+                                      "The Martian",
+                                      "That Awkward Moment",
+                                      "Kitchen Sink",
+                                      "Irresistable",
+                                      "What If",
+                                      "Always Shine",
+                                      "Breathe In",
+                                      "Alpha Gang",
+                                      "Izzy Gets The F*ck Across Town"
+                                ]);
 
-const ridleyScott = new director("Ridley Scott", 
-                                1937, 
+const ridleyScott = new director("Ridley Scott",
+                                1937,
                                 "Ridley Scott is an English film director and producer, born on November 30, 1937, in South Shields, England. \
                                 He began his career in advertising before transitioning to film and television in the 1970s. Scott is best known for his work on several successful films, \
-                                including Alien, Blade Runner, and Gladiator, and has received numerous nominations and awards for his directing and producing work, including several Academy Award nominations", [
+                                including Alien, Blade Runner, and Gladiator, and has received numerous nominations and awards for his directing and producing work, including several Academy Award nominations",
+                                [
                                   "Alien",
                                   "Blade Runner",
                                   "Thelma & Louise",
@@ -186,15 +188,32 @@ const ridleyScott = new director("Ridley Scott",
                                   "Alien: Covenant"
                                 ]);
 
-const andyWeir = new writer("Andy Weir", 
-                                1972, 
+const andyWeir = new writer("Andy Weir",
+                                1972,
                                 "Andy Weir is an American novelist, born on June 16, 1972, in Davis, California. He is best known for his debut novel, The Martian, \
                                 which was later adapted into a successful film. Weir has since published several other novels, including Artemis and Project Hail Mary, \
-                                and has been recognized for his contribution to science fiction literature, earning nominations for several prestigious awards, including the Hugo Award.", [
+                                and has been recognized for his contribution to science fiction literature, earning nominations for several prestigious awards, including the Hugo Award.",
+                                [
                                   "Artemis",
                                   "Project Hail Mary",
                                   "Zhekas"
                                 ]);
 
-const theMartian = new movie('The Martian', 'science fiction, adventure, and drama', 2015, ridleyScott, [andyWeir], [mattDamon, jessicaChastain, kristenWiig, chiwetelEjiofor,
-  kateMara, sebastianStan, michaelPena, mackenzieDavis], './images/poster.jfif', 'https://www.youtube.com/watch?v=ej3ioOneTy8', "'The Martian' is a film that follows astronaut Mark Watney, who becomes stranded on Mars after his team leaves him behind thinking that he was dead. He must use his skills and resourcefulness to survive and find a way to signal back to Earth that he's alive.");
+const theMartian = new movie('The Martian',
+                                'science fiction, adventure, and drama',
+                                2015,
+                                ridleyScott,
+                                [andyWeir],
+                                [
+                                    mattDamon,
+                                    jessicaChastain,
+                                    kristenWiig,
+                                    chiwetelEjiofor,
+                                    kateMara,
+                                    sebastianStan,
+                                    michaelPena,
+                                    mackenzieDavis
+                                ],
+                                './images/poster.jfif', 'https://www.youtube.com/watch?v=ej3ioOneTy8',
+                                "'The Martian' is a film that follows astronaut Mark Watney, who becomes stranded on Mars after his team leaves him behind thinking that he was dead. He must use his skills and resourcefulness to survive and find a way to signal back to Earth that he's alive."
+                            );

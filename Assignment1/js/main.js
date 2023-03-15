@@ -60,13 +60,28 @@ function constructInfo() {
         return sect;
     }
 
-    const genInfoPar = document.createElement('p');
-    genInfoPar.textContent = `This movie is about \'${theMartian.title}\' (genre ${theMartian.genre}). ${theMartian.plot}`;
-    const genInfSctn = section('General Info', genInfoPar);
-    image(genInfSctn, 'poster', theMartian.poster, 'poster of \'The Martian\'')
+    const titlePar = document.createElement('p');
+    titlePar.textContent = theMartian.title;
+    section('Title', titlePar);
+    //!!!!! moet accesible !!!!!!!!!!!
+    const posterFig = document.createElement('figure');
+    const posterImg = document.createElement('img');
+    posterImg.src = theMartian.poster;
+    posterFig.appendChild(posterImg);
+    section('Poster', posterFig);
 
-    section('Actors', theMartian.listArtists(theMartian.actors, tooltip, 'actor'));
+    const genrePar = document.createElement('p');
+    genrePar.textContent = theMartian.genre;
+    section('Genre', genrePar);
+
+    const plotPar = document.createElement('p');
+    plotPar.textContent = theMartian.plot;
+    section('Plot', plotPar);
+
+
+    section('Stars', theMartian.listArtists(theMartian.actors, tooltip, 'actor'));
     section('Writers', theMartian.listArtists(theMartian.writers, tooltip, 'writer'));
+
 
     const direcPar = document.createElement('p');
     direcPar.appendChild(theMartian.director.toolTippedName(tooltip));
