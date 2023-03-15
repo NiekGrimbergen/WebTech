@@ -1,6 +1,6 @@
+console.log('Run this site on http server (like lite-server), for the imports to work');
 import {theMartian} from './data.js';
 import {dom, clearChildren, image} from './helper.js';
-console.log('Run this site on http server (like lite-server), for the imports to work');
 
 
 //loads the rest of the script: it all starts here
