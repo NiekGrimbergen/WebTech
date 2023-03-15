@@ -207,7 +207,7 @@ const andyWeir = new writer("Andy Weir",
                                 ]);
 
 const theMartian = new movie('The Martian',
-                                'science fiction, adventure, and drama',
+                                'Science fiction, adventure, and drama',
                                 2015,
                                 ridleyScott,
                                 [andyWeir],
