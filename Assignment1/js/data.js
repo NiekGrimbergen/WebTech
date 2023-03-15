@@ -30,7 +30,7 @@ const jessicaChastain = new actor("Jessica Chastain",
                                     "Jessica Chastain's movies was Born on March 24, 1977, in Sacramento, California, the American actress first appeared on TV in the mid-2000s with roles in 'ER' \
                                     and 'Veronica Mars.' But it was her role in 'The Tree of Life' in 2011 that got her nominated for a Golden Globe for Best Supporting Actress. \
                                     In addition to her acting career, Chastain is a vocal advocate for gender equality and women's rights. She has been involved in several initiatives \
-                                    to promote gender diversity in Hollywood and to support women's access to healthcare and education",
+                                    to promote gender diversity in Hollywood and to support women's access to healthcare and education.",
                                     [
                                       "Molly's Game",
                                       "Interstellar",
@@ -50,7 +50,7 @@ const kristenWiig = new actor("Kristen Wiig",
                                 1973,
                                 "Kristen Wiig is an actress and comedian. She was born on August 22, 1973, in Canandaigua, New York. Wiig got her start in the comedy world as \
                                 a member of the improvisation group: The Groundlings in Los Angeles. She later joined the cast of the sketch series Saturday Night Live, \
-                                where  she became known for her weird and funny characters and impressions",
+                                where  she became known for her weird and funny characters and impressions.",
                                 [
                                   "Bridesmaids",
                                   "Wonder Woman 1984",
@@ -177,7 +177,7 @@ const ridleyScott = new director("Ridley Scott",
                                 1937,
                                 "Ridley Scott is an English film director and producer, born on November 30, 1937, in South Shields, England. \
                                 He began his career in advertising before transitioning to film and television in the 1970s. Scott is best known for his work on several successful films, \
-                                including Alien, Blade Runner, and Gladiator, and has received numerous nominations and awards for his directing and producing work, including several Academy Award nominations",
+                                including Alien, Blade Runner, and Gladiator, and has received numerous nominations and awards for his directing and producing work, including several Academy Award nominations.",
                                 [
                                   "Alien",
                                   "Blade Runner",
