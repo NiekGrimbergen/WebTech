@@ -38,7 +38,7 @@ function constructHeader() {
         let link = dom('a', 'navbar__link', li, pair[0]);
         link.href = pair[1];
     }
-}
+} 
 
 function constructInfo() {
     //set the classname of main to content for our css
@@ -82,6 +82,27 @@ function constructInfo() {
 function constructFooter() {
     const footer = document.querySelector('footer');
 
+    const section = dom('section', 'section section--dark section--top-rounded movie-links', footer);
+    const h2 = dom('h2', 'section__title', section, 'Stay Connected');
+    const p = dom('p', 'subtitle', section, "Follow 'The Martian' on Social Media and Visit the Official Website:");
+    const div = dom('div', 'movie-links__block', section);
+
+    let linkPairs = [
+        ['https://www.foxmovies.com/movies/the-martian', 'images/www_icon.svg', 'A picture of the icon of a website'],
+        ['https://twitter.com/MartianMovie', 'images/tw_icon.svg', 'A picture of the icon of Wwitter'],
+        ['https://www.facebook.com/MartianMovie/', 'images/fb_icon.svg', 'A picture of the icon of a Facebook'],
+        ['https://www.instagram.com/martianmovie/', 'images/in_icon.svg', 'A picture of the icon of Instagram'],
+        ['https://www.youtube.com/user/foxmovies', 'images/yt_icon.svg', 'A picture of the icon of Youtube']
+    ];
+
+    linkPairs.forEach(pair => {
+        const link = dom('a', 'movie-links__link', div);
+        link.href = pair[0];
+        const img = dom('img', 'movie-links__img', link);
+        img.src = pair[1];
+        img.alt = pair[2];
+    });
+
     // What can the user choose to style?
 
     let stylableElements = ['body', 'header', 'footer', 'article', 'section'];
@@ -109,9 +130,9 @@ function constructFooter() {
     addSelector('element', stylableElements);
     addSelector('property', stylableProps);
     addSelector('value', []);
-    // adds event listeners and logic to the <select>-tags in the footer
     setupStyleMenu();
 }
+
 
 
 function createTooltip() {
