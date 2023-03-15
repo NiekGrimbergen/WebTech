@@ -521,7 +521,7 @@ margin-right: 10px;
 
     /*-------------------- 2.5 Cast styles --------------------*/
 
-    .cast__container {
+    .cast__container {                              /* added this styling because feedback on our first project was to have the text and images side-by-side on the actor page. */
         display: flex;
         align-items: center;
       }
