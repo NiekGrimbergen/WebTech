@@ -24,6 +24,7 @@ const mattDamon = new actor("Matt Damon",
                               ],
                           "./images/matt_damon.jfif");
 
+
 const jessicaChastain = new actor("Jessica Chastain",
                                     1977,
                                     "Jessica Chastain's movies was Born on March 24, 1977, in Sacramento, California, the American actress first appeared on TV in the mid-2000s with roles in 'ER' \
@@ -43,6 +44,7 @@ const jessicaChastain = new actor("Jessica Chastain",
                                       "Armageddon Time"
                                   ],
                               "./images/jessica_chastain.jfif");
+
 
 const kristenWiig = new actor("Kristen Wiig",
                                 1973,
