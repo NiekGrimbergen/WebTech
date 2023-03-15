@@ -124,6 +124,7 @@ class actor extends artist {
         const img = document.createElement('img');
         figure.appendChild(img);
         img.src = this.photo;
+        img.alt = "Headshot of " + this.name
         return figure;
     }
 }

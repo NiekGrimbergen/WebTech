@@ -1,6 +1,6 @@
 console.log('Run this site on http server (like lite-server), for the imports to work');
 import {theMartian} from './data.js';
-import {dom, clearChildren, image} from './helper.js';
+import {dom, clearChildren, imageFigure} from './helper.js';
 
 
 //loads the rest of the script: it all starts here
@@ -19,10 +19,10 @@ function setupPage() {
 
 function constructHeader() {
     const header = document.querySelector('header');
-    const fig = dom('figure', 'logo-container', header);
-    const img = dom('img', 'logo-container__logo', fig);
-    img.src = './images/logo.png';
-    img.alt = "Logo reading &quot;The Martian&quot;";
+
+    const fig = imageFigure(header, 'logo-container', './images/logo.png', "Logo reading &quot;The Martian&quot;");
+    const img = fig.querySelector('img');
+    img.classList.add('logo-container__logo');
     const nav = dom('nav', 'navbar', header);
 
     const menuPairs = [
@@ -69,11 +69,9 @@ function constructInfo(movie) {
     // Creates all sections with correct formatted content
     sectionsFromPairs(sectionContentPairs, info);
 }
-// !!!!!!!!!!needs the new figure img manier !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 function bannerAndTitle(parent) {
-    const banner = dom('figure', 'banner', parent);
-    const bannerImg = dom('img', 'banner__img', banner);
-    bannerImg.src = './images/banner.jpg';
+    const banner = imageFigure(parent, 'banner', './images/banner.jpg', 'Banner for the movie the Martian');
     const title = dom('h1', 'title title--white', parent, 'Info');
 }
 // Creates a section inside parent with an h2 title containing a specified Node

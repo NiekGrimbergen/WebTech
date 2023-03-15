@@ -22,7 +22,7 @@ const mattDamon = new actor("Matt Damon",
                                   "Downsizing",
                                   "Ford v Ferrari"
                               ],
-                          "./images/matt_damon.jfif");
+                          "./images/matt_damon_info.jpg");
 
 
 const jessicaChastain = new actor("Jessica Chastain",
@@ -43,7 +43,7 @@ const jessicaChastain = new actor("Jessica Chastain",
                                       "Texas Killing Fields",
                                       "Armageddon Time"
                                   ],
-                              "./images/jessica_chastain.jfif");
+                              "./images/jessica_chastain_info.jpg");
 
 
 const kristenWiig = new actor("Kristen Wiig",
@@ -63,7 +63,7 @@ const kristenWiig = new actor("Kristen Wiig",
                                   "Anchorman 2: The Legend",
                                   "MacGruber"
                               ],
-                          "./images/kristen_wiig.jfif");
+                          "./images/kristin_wiig_info.jpg");
 
 
 const chiwetelEjiofor = new actor("Chiwetel Ejiofor",
@@ -84,7 +84,8 @@ const chiwetelEjiofor = new actor("Chiwetel Ejiofor",
                                   "Maleficent 2",
                                   "The Lion King",
                                   "Love Actually"
-                                ]);
+                                ],
+                                "./images/chiwetel_ejiofor_info.jpg");
 
 const kateMara = new actor("Kate Mara",
                                 1983,
@@ -106,7 +107,8 @@ const kateMara = new actor("Kate Mara",
                                   "Iron Clad",
                                   "Pose",
                                   "Captive"
-                              ]);
+                              ],
+                              "./images/kate_mara_info.jpg");
 
 const sebastianStan = new actor("Sebastian Stan",
                                 1982,
@@ -127,7 +129,8 @@ const sebastianStan = new actor("Sebastian Stan",
                                   "Captain America: New World Order",
                                   "Avengers: Infinity War",
                                   "Black Widow"
-                              ]);
+                              ],
+                              "./images/sebastian_stan_info.jpg");
 
 const michaelPena = new actor("Michael Peña",
                                 1976,
@@ -149,7 +152,8 @@ const michaelPena = new actor("Michael Peña",
                                   "The Martian",
                                   "12 Strong",
                                   "Moonfall"
-                              ]);
+                              ],
+                              "./images/michael_pena_info.jpg");
 
 const mackenzieDavis = new actor("Mackenzie Davies",
                                     1987,
@@ -171,7 +175,8 @@ const mackenzieDavis = new actor("Mackenzie Davies",
                                       "Breathe In",
                                       "Alpha Gang",
                                       "Izzy Gets The F*ck Across Town"
-                                ]);
+                                ],
+                                "./images/mackenzie_davies_info.jpg");
 
 const ridleyScott = new director("Ridley Scott",
                                 1937,
