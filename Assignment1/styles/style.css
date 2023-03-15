@@ -51,6 +51,11 @@ body {
     background-color: #F1F2F3;
 }
 
+.article, .content {
+    display: flex;
+    flex-direction: column;
+}
+
 .section {
     padding: 0.5rem 4vw;
 }
@@ -349,28 +354,41 @@ margin-right: 10px;
 
 
 
+/*--------------- info.html styles ----------------*/
 
-.artist {
+.poster__img {
+    max-height: 25vh;
+}
+
+.actor__ul, .writer__ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.actor__ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.actor__li {
+    background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    padding: 1em;
-    grid-template-columns: 1fr;
-
-    width: 100%;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    max-width: 230px;
+    margin: 15px;
 }
 
-.artist__figure {
-    overflow: hidden;
+.actor__li figure {
+    height: 30vh;
+    overflow: hidden !important;
 }
 
-.artist__header {
-    font-size: 2.5rem;
-
-    color: var(--primary-color);
-}
-
-.artist__img {
+.actor__li img {
+    min-height: 100%;
     max-width: 100%;
 }
 
@@ -379,7 +397,6 @@ margin-right: 10px;
 .tooltip {
     position: absolute;
     width: 500px;
-    height: 200px;
     background: white;
     border: 1px solid #ccc;
     border-radius: 5px;
