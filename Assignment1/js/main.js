@@ -9,7 +9,8 @@ function setupPage() {
     //Constructs all the elements that are shared with other pages, but now with dom manipulation
     constructHeader();
     if (window.location.pathname == '/info.html') {
-        constructInfo();
+        // Pass the imported movie object in (could have been any movie, structured like ours)
+        constructInfo(theMartian);
     }
     constructFooter();
 }
@@ -22,7 +23,7 @@ function constructHeader() {
     img.alt = "Logo reading &quot;The Martian&quot;";
     const nav = dom('nav', 'navbar', header);
 
-    let menuPairs = [
+    const menuPairs = [
         ['Home', 'index.html'],
         ['Synopsis', 'summary.html'],
         ['Ratings', 'ratings.html'],
@@ -38,60 +39,68 @@ function constructHeader() {
         let link = dom('a', 'navbar__link', li, pair[0]);
         link.href = pair[1];
     }
-} 
+}
 
-function constructInfo() {
+function constructInfo(movie) {
     //set the classname of main to content for our css
     const main = document.querySelector('main');
     main.className = 'content';
 
+    // Create article object inside main
     const info = dom('article', 'article', main);
-    const banner = dom('figure', 'banner', info);
-    const bannerImg = dom('img', 'banner__img', banner);
-    bannerImg.src = './images/banner.jpg';
-    const title = dom('h1', 'title title--white', info, 'Info');
-    //the assignment requires to build articles with js:
+    // Create banner as on other pages
+    bannerAndTitle(info);
+    // Create a 'general' tooltip that we can reuse (quicker than creating and destroying one every time)
     const tooltip = createTooltip();
 
-    let section = (title, contentNode) => {
-        const sect = dom('section', 'section', info);
-        const header = dom('h2', 'section__title', sect, title);
-        sect.appendChild(contentNode);
-        return sect;
+    // Our content listed as ['Title of the section', 'content']
+    const sectionContentPairs = [
+        ['Title', movie.title],
+        ['Genre', movie.genre],
+        ['Plot', movie.plot],
+        ['Poster', movie.posterFigure()],
+        ['Stars', movie.listArtists(movie.actors, tooltip, 'actor')],
+        ['Writers', movie.listArtists(movie.writers, tooltip, 'writer')],
+        ['Director', movie.director.toolTippedName(tooltip)],
+        ['Trailer', movie.trailerLink('Click here to watch the trailer')],
+    ]
+    // Creates all sections with correct formatted content
+    sectionsFromPairs(sectionContentPairs, info);
+}
+
+function bannerAndTitle(parent) {
+    const banner = dom('figure', 'banner', parent);
+    const bannerImg = dom('img', 'banner__img', banner);
+    bannerImg.src = './images/banner.jpg';
+    const title = dom('h1', 'title title--white', parent, 'Info');
+}
+// Creates a section inside parent with an h2 title containing a specified Node
+function section(parent, title, contentNode) {
+    const section = dom('section', 'section', parent);
+    const header = dom('h2', 'section__title', section, title);
+    section.appendChild(contentNode);
+    return section;
+}
+// Creates sections within a parent based on 'title-content' pairs
+function sectionsFromPairs(sectionContentPairs, parent) {
+    for (const pair of sectionContentPairs) {
+        // Element is a node element we just want to append that to our new section
+        let element = pair[1];
+        // In case it's just a string: let's make a paragraph to append to our new section
+        if (typeof pair[1] == 'string') {
+            const par = document.createElement('p');
+            par.textContent = pair[1];
+            element = par;
+        }
+        //In case of an <u> (like tooltipped names) we also just want to put that inside a paragraph rather than appending as u
+        else if (pair[1].tagName == 'U') {
+            const par = document.createElement('p');
+            par.appendChild(pair[1]);
+            element = par;
+        }
+        // Creates the section with correct element attached
+        section(parent, pair[0], element);
     }
-
-    const titlePar = document.createElement('p');
-    titlePar.textContent = theMartian.title;
-    section('Title', titlePar);
-    //!!!!! moet accesible !!!!!!!!!!!
-    const posterFig = document.createElement('figure');
-    const posterImg = document.createElement('img');
-    posterImg.src = theMartian.poster;
-    posterFig.appendChild(posterImg);
-    section('Poster', posterFig);
-
-    const genrePar = document.createElement('p');
-    genrePar.textContent = theMartian.genre;
-    section('Genre', genrePar);
-
-    const plotPar = document.createElement('p');
-    plotPar.textContent = theMartian.plot;
-    section('Plot', plotPar);
-
-
-    section('Stars', theMartian.listArtists(theMartian.actors, tooltip, 'actor'));
-    section('Writers', theMartian.listArtists(theMartian.writers, tooltip, 'writer'));
-
-
-    const direcPar = document.createElement('p');
-    direcPar.appendChild(theMartian.director.toolTippedName(tooltip));
-    section('Director', direcPar);
-
-    const trailerPar = document.createElement('p');
-    const a = theMartian.trailerLink('Click here to watch the trailer');
-    trailerPar.appendChild(a);
-    section('Trailer', trailerPar);
-
 }
 
 function constructFooter() {

@@ -36,6 +36,15 @@ class movie {
         a.textContent = textContent;
         return a;
     }
+
+    posterFigure() {
+        const figure = document.createElement('figure');
+        const img = document.createElement('img');
+        img.src = this.poster;
+        img.alt = `Poster for '${this.title}'`;
+        figure.appendChild(img);
+        return figure;
+    }
 }
 
 class artist {

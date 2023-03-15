@@ -376,6 +376,7 @@ margin-right: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 1rem;
     border: 1px solid #ccc;
     max-width: 230px;
@@ -384,13 +385,11 @@ margin-right: 10px;
 
 .actor__li figure {
     height: 30vh;
-    overflow: hidden !important;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
 }
 
-.actor__li img {
-    min-height: 100%;
-    max-width: 100%;
-}
 
 
 
