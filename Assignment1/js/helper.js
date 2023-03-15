@@ -1,4 +1,4 @@
-export {dom, clearChildren, image};
+export {dom, clearChildren, imageFigure};
 
 //helper function to create dom elements quickly
 function dom(type, className, parent, textContent = "") {
@@ -17,9 +17,11 @@ function clearChildren(element) {
     }
 }
 
-function image(parent, blockName, image, alt) {
-    var fig = dom('figure', blockName + '__figure', parent);
-    var img = dom('img', blockName + '__img', fig);
+function imageFigure(parent, blockName, image, alt) {
+    const fig = dom('figure', blockName, parent);
+    const img = dom('img', `${blockName}__img`, fig);
     img.src = image;
     img.alt = alt;
-}
+    return fig;
+  }
+  
