@@ -22,7 +22,7 @@ const mattDamon = new actor("Matt Damon",
                                   "Downsizing",
                                   "Ford v Ferrari"
                               ],
-                          "./images/matt_damon.jfif");
+                          "./images/matt_damon_info.jpg");
 
 
 const jessicaChastain = new actor("Jessica Chastain",
@@ -30,7 +30,7 @@ const jessicaChastain = new actor("Jessica Chastain",
                                     "Jessica Chastain's movies was Born on March 24, 1977, in Sacramento, California, the American actress first appeared on TV in the mid-2000s with roles in 'ER' \
                                     and 'Veronica Mars.' But it was her role in 'The Tree of Life' in 2011 that got her nominated for a Golden Globe for Best Supporting Actress. \
                                     In addition to her acting career, Chastain is a vocal advocate for gender equality and women's rights. She has been involved in several initiatives \
-                                    to promote gender diversity in Hollywood and to support women's access to healthcare and education",
+                                    to promote gender diversity in Hollywood and to support women's access to healthcare and education.",
                                     [
                                       "Molly's Game",
                                       "Interstellar",
@@ -43,14 +43,14 @@ const jessicaChastain = new actor("Jessica Chastain",
                                       "Texas Killing Fields",
                                       "Armageddon Time"
                                   ],
-                              "./images/jessica_chastain.jfif");
+                              "./images/jessica_chastain_info.jpg");
 
 
 const kristenWiig = new actor("Kristen Wiig",
                                 1973,
                                 "Kristen Wiig is an actress and comedian. She was born on August 22, 1973, in Canandaigua, New York. Wiig got her start in the comedy world as \
                                 a member of the improvisation group: The Groundlings in Los Angeles. She later joined the cast of the sketch series Saturday Night Live, \
-                                where  she became known for her weird and funny characters and impressions",
+                                where  she became known for her weird and funny characters and impressions.",
                                 [
                                   "Bridesmaids",
                                   "Wonder Woman 1984",
@@ -63,7 +63,7 @@ const kristenWiig = new actor("Kristen Wiig",
                                   "Anchorman 2: The Legend",
                                   "MacGruber"
                               ],
-                          "./images/kristen_wiig.jfif");
+                          "./images/kristin_wiig_info.jpg");
 
 
 const chiwetelEjiofor = new actor("Chiwetel Ejiofor",
@@ -84,7 +84,8 @@ const chiwetelEjiofor = new actor("Chiwetel Ejiofor",
                                   "Maleficent 2",
                                   "The Lion King",
                                   "Love Actually"
-                                ]);
+                                ],
+                                "./images/chiwetel_ejiofor_info.jpg");
 
 const kateMara = new actor("Kate Mara",
                                 1983,
@@ -106,7 +107,8 @@ const kateMara = new actor("Kate Mara",
                                   "Iron Clad",
                                   "Pose",
                                   "Captive"
-                              ]);
+                              ],
+                              "./images/kate_mara_info.jpg");
 
 const sebastianStan = new actor("Sebastian Stan",
                                 1982,
@@ -127,7 +129,8 @@ const sebastianStan = new actor("Sebastian Stan",
                                   "Captain America: New World Order",
                                   "Avengers: Infinity War",
                                   "Black Widow"
-                              ]);
+                              ],
+                              "./images/sebastian_stan_info.jpg");
 
 const michaelPena = new actor("Michael Peña",
                                 1976,
@@ -149,7 +152,8 @@ const michaelPena = new actor("Michael Peña",
                                   "The Martian",
                                   "12 Strong",
                                   "Moonfall"
-                              ]);
+                              ],
+                              "./images/michael_pena_info.jpg");
 
 const mackenzieDavis = new actor("Mackenzie Davies",
                                     1987,
@@ -171,13 +175,14 @@ const mackenzieDavis = new actor("Mackenzie Davies",
                                       "Breathe In",
                                       "Alpha Gang",
                                       "Izzy Gets The F*ck Across Town"
-                                ]);
+                                ],
+                                "./images/mackenzie_davies_info.jpg");
 
 const ridleyScott = new director("Ridley Scott",
                                 1937,
                                 "Ridley Scott is an English film director and producer, born on November 30, 1937, in South Shields, England. \
                                 He began his career in advertising before transitioning to film and television in the 1970s. Scott is best known for his work on several successful films, \
-                                including Alien, Blade Runner, and Gladiator, and has received numerous nominations and awards for his directing and producing work, including several Academy Award nominations",
+                                including Alien, Blade Runner, and Gladiator, and has received numerous nominations and awards for his directing and producing work, including several Academy Award nominations.",
                                 [
                                   "Alien",
                                   "Blade Runner",
@@ -202,7 +207,7 @@ const andyWeir = new writer("Andy Weir",
                                 ]);
 
 const theMartian = new movie('The Martian',
-                                'science fiction, adventure, and drama',
+                                'Science fiction, adventure, and drama',
                                 2015,
                                 ridleyScott,
                                 [andyWeir],

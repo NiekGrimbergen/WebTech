@@ -72,7 +72,11 @@ class artist {
         tooltip.style.top = hoverElement.offsetTop + hoverElement.clientHeight + 30 + 'px';
 
         tooltip.children[0].textContent = this.name + ` (${this.yearOfBirth})`;
-        tooltip.children[1].textContent = this.bio;
+        if(this.hasOwnProperty('books')){
+            tooltip.children[1].textContent =this.bio + ` Books written: ${this.books.join(', ')}.`;
+        } else{
+            tooltip.children[1].textContent = this.bio + ` Starred in: ${this.movies.join(', ')}.`;
+        }
     }
     // attaches the tooltip to a specified element
     attachTooltip(tooltip, attachTo, capturing = false) {
@@ -124,6 +128,7 @@ class actor extends artist {
         const img = document.createElement('img');
         figure.appendChild(img);
         img.src = this.photo;
+        img.alt = "Headshot of " + this.name
         return figure;
     }
 }

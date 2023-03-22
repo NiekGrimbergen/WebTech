@@ -484,6 +484,13 @@ margin-right: 10px;
         gap: .5rem;
     }
 
+    .button--orange {
+        color: white;
+        background-color: var(--primary-color);
+        width: 10%;                                     /*Added this because of feedback on the original project. All butons have the same size now. */
+        text-align: center;
+      }
+
     .reviews {
         order: 4;
         width: 30%;
@@ -513,6 +520,44 @@ margin-right: 10px;
     }
 
     /*-------------------- 2.5 Cast styles --------------------*/
+
+    .cast__container {                              /* added this styling because feedback on our first project was to have the text and images side-by-side on the actor page. */
+        display: flex;
+        align-items: center;
+      }
+      
+      .cast__img {
+        margin-right: 2rem;
+      }
+      
+      .cast__info {
+        flex: 1;
+      }
+      
+      .section__title-actor {
+        text-align: center;
+        margin-top: 2rem;
+        padding-left: 350px;
+      }
+      
+      .section--cast {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      
+      .section__paragraph-actor {
+        width: 50%;
+        margin-left: 1rem;
+        padding-left: 10rem;
+      }
+      
+      .cast__element__img {
+        width: 600px;
+        height: 400px;
+      }
+      
+     
 
     /*-------------------- 2.6 Contact styles --------------------*/
     .contact-content {
