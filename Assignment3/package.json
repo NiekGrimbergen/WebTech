@@ -1,0 +1,24 @@
+{
+  "name": "assignment3",
+  "version": "1.0.0",
+  "description": "assignment for webtechnology",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiekGrimbergen/WebTech.git"
+  },
+  "keywords": [
+    "nodeJS",
+    "SQLite",
+    "CS"
+  ],
+  "author": "Niek Grimbergen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NiekGrimbergen/WebTech/issues"
+  },
+  "homepage": "https://github.com/NiekGrimbergen/WebTech#readme"
+}
